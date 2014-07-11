@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Implementing quicksort in C using TDD Part 2
+title: Implementing quicksort Part 2
 author:
   display_name: Topher
   login: admin

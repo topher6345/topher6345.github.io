@@ -4,6 +4,8 @@ email: topher@tophersaunders.com
 description: "Web Developer, Code Addict, Sound Wizard"
 baseurl: ""
 url: "http://tophersaunders.com"
+username: topher6345
+twitter: snophort
 
 # Build settings
 markdown: kramdown
