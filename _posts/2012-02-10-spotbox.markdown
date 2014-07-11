@@ -1,0 +1,38 @@
+---
+layout: post
+status: publish
+published: true
+title: '"SpotBox" - Interactive Visual Algorithmic Music Generator in MaxMSP'
+author:
+  display_name: Topher
+  login: admin
+  email: csaunders@berklee.net
+  url: http://www.tophersaunders.com
+author_login: admin
+author_email: csaunders@berklee.net
+author_url: http://www.tophersaunders.com
+excerpt: "[caption id=\"\" align=\"aligncenter\" width=\"553\" caption=\"Click to
+  Download (OSX only)\"]<a href=\"http:&#47;&#47;www.tophersaunders.com&#47;max&#47;spotbox.zip\"><img
+  class=\"      \" title=\"spotbox.zip 9.1 MB\" src=\"http:&#47;&#47;www.tophersaunders.com&#47;img&#47;spotbox.png\"
+  alt=\"\" width=\"553\" height=\"338\" &#47;><&#47;a>[&#47;caption]\r\n\r\nSpotBox
+  is a application for Mac OSX that generates music and colors\r\n\r\nMusic generated
+  uses randomness and in theory should never repeat.\r\n\r\n"
+wordpress_id: 463
+wordpress_url: http://www.tophersaunders.com/wp/?p=463
+date: '2012-02-10 18:01:23 -0800'
+date_gmt: '2012-02-10 23:01:23 -0800'
+categories:
+- Audio
+- Code
+- Graphics
+tags:
+- MaxMSP
+---
+<p>[caption id="" align="aligncenter" width="553" caption="Click to Download (OSX only)"]<a href="http:&#47;&#47;www.tophersaunders.com&#47;max&#47;spotbox.zip"><img class="      " title="spotbox.zip 9.1 MB" src="http:&#47;&#47;www.tophersaunders.com&#47;img&#47;spotbox.png" alt="" width="553" height="338" &#47;><&#47;a>[&#47;caption]</p>
+<p>SpotBox is a application for Mac OSX that generates music and colors</p>
+<p>Music generated uses randomness and in theory should never repeat.</p>
+<p><a id="more"></a><a id="more-463"></a></p>
+<p>Colors correspond to the tones of the chromatic scale (ex. C is red)</p>
+<p>The video doesn&rsquo;t do a good job showing the colors fade. The patch looks better.</p>
+<p><center><iframe src="http:&#47;&#47;www.youtube.com&#47;embed&#47;YXPUVv9_Bkg" frameborder="0" width="480" height="360"><&#47;iframe><&#47;center><br />
+The way SpotBox composes music is different than CubeBox.</p>

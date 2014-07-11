@@ -1,0 +1,27 @@
+---
+layout: post
+status: publish
+published: true
+title: MIDI Controlled Video Mixer in Jitter
+author:
+  display_name: Topher
+  login: admin
+  email: csaunders@berklee.net
+  url: http://www.tophersaunders.com
+author_login: admin
+author_email: csaunders@berklee.net
+author_url: http://www.tophersaunders.com
+wordpress_id: 201
+wordpress_url: http://www.tophersaunders.com/wp/?p=201
+date: '2011-04-29 14:19:38 -0700'
+date_gmt: '2011-04-29 18:19:38 -0700'
+categories:
+- Video
+- Code
+tags:
+- Jitter
+---
+<p>http:&#47;&#47;www.youtube.com&#47;watch?v=lyT5Js5kVak</p>
+<p>A demo of my system for MIDI controlled realtime video mixing.<a href="http:&#47;&#47;www.tophersaunders.com&#47;VJ&#47;TopherVJ.zip">-- TopherVJ.zip<&#47;a> 9.8 Mb</p>
+<p>The music I made in Reason using my Subtractor Chord Sequencer.--<a href="http:&#47;&#47;www.tophersaunders.com&#47;max&#47;mono.zip">mono.zip<&#47;a> 9.0 Mb</p>
+<p>&nbsp;</p>

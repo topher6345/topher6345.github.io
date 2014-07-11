@@ -1,0 +1,10 @@
+# Site settings
+title: Tophersaunders.com	
+email: topher@tophersaunders.com
+description: "Web Developer, Code Addict, Sound Wizard"
+baseurl: ""
+url: "http://tophersaunders.com"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
