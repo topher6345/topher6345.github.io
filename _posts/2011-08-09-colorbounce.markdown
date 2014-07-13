@@ -21,9 +21,12 @@ categories:
 - Graphics
 tags:
 - MaxMSP
----
-<p>A bouncy MIDI controller with Scriabin-inspired lights.</p>
-<p>*Aug 11* - Now with <strong>30<&#47;strong> more modes &amp; scales!</p>
-<p>[caption id="" align="aligncenter" width="442" caption="Click to Download (OSX Only)"]<a href="http:&#47;&#47;www.tophersaunders.com&#47;max&#47;ColorBounceBeta.zip"><img class="   " title="ColorBounceBeta.zip 8.67 MB" src="http:&#47;&#47;www.tophersaunders.com&#47;img&#47;colorbounce.png" alt="" width="442" height="326" &#47;><&#47;a>[&#47;caption]</p>
-<p><a href="http:&#47;&#47;www.tophersaunders.com&#47;max&#47;ColorBounceMax.zip"> Download the MaxPatch <&#47;a></p>
-<p><iframe src="http:&#47;&#47;player.vimeo.com&#47;video&#47;27521171?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=0" frameborder="0" width="500" height="442"><&#47;iframe></p>
+---A bouncy MIDI controller with Scriabin-inspired lights.
+
+*Aug 11* - Now with 
+**30 more modes & scales!**
+
+[caption id="" align="aligncenter" width="442" caption="Click to Download (OSX Only)"]
+[![](http://www.tophersaunders.com/img/colorbounce.png)[/caption]](http://www.tophersaunders.com/max/ColorBounceBeta.zip)
+
+[Download the MaxPatch](http://www.tophersaunders.com/max/ColorBounceMax.zip)

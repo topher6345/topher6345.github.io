@@ -14,13 +14,15 @@ author_url: http://www.tophersaunders.com
 excerpt: "MIDI Scanned Synthesis\r\n\r\nIn the spirit of Csound and open source software,
   I present my most refined standalone MIDI scanned synthesis Keyboard .csd.\r\nThis
   instrument will work with any MIDI controller or sequencer. If you check out Andreas
-  Russo's <a href=\"http:&#47;&#47;www.csounds.com&#47;journal&#47;issue16&#47;audiorouting.html\"
-  target=\"_blank\">article<&#47;a> about how to set up Csound MIDI with any DAW.
+  Russo's 
+[article about how to set up Csound MIDI with any DAW.
   This instrument will work with Andreas'configuration, and you'll be MIDI sequencing
-  with scanned synthesis in no time!\r\n\r\n<img src=\"http:&#47;&#47;www.tophersaunders.com&#47;wp&#47;wp-content&#47;uploads&#47;2012&#47;04&#47;Screen-shot-2012-04-11-at-5.34.27-PM-300x244.png\"
-  alt=\"MIDI scanned synthesis\" width=\"300\" height=\"244\" class=\"aligncenter
-  size-medium wp-image-528\" &#47;>\r\n\r\n<a href=\"http:&#47;&#47;www.tophersaunders.com&#47;csd&#47;ScanMIDI.zip\">ScanMidi.zip
-  4.57 KB<&#47;a>\r\n\r\n[sourcecode collapse=\"true\" gutter=\"true\"]\r\n\r\n<CsoundSynthesizer>\r\n<CsOptions>\r\n<&#47;CsOptions>\r\n<CsInstruments>\r\nnchnls
+  with scanned synthesis in no time!\r\n\r\n
+![\"MIDI](\"http://www.tophersaunders.com/wp/wp-content/uploads/2012/04/Screen-shot-2012-04-11-at-5.34.27-PM-300x244.png\")\r\n\r\n](\"http://www.csounds.com/journal/issue16/audiorouting.html\")[ScanMidi.zip
+  4.57 KB\r\n\r\n[sourcecode collapse=\"true\" gutter=\"true\"]\r\n\r\n
+\r\n
+\r\n\r\n
+\r\nnchnls
   = 2\r\nsr = 44100\r\nksmps = 128\r\n0dbfs = 1\r\n\r\n#define MATRIX\t\t #\"circularstring-128\"#\r\n\r\n;
   \      Parameter        CC#\r\n#define ATTACK\t\t #\t17\t#\r\n#define DECAY\t\t
   #\t18\t#\r\n#define SUSTAIN\t         #\t19\t#\r\n#define RELEASE \t #\t20\t#\r\n\r\n#define
@@ -47,7 +49,7 @@ excerpt: "MIDI Scanned Synthesis\r\n\r\nIn the spirit of Csound and open source 
   midic7 \t$STEREOOFFSET , 0 , .1\r\n\t\t;FILTER;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n\t\tgkfco
   midic7 $FILTER , 100 , 10000 , gifntraj\r\n\t\tgkrez midic7 $RESONANCE , 0 , .7\r\n\t\t;;;;;Rate;;;;;;;;;;;;;;;;;;;;;;;;;\r\n\t\tgkrate
   midic7\t$RATE , .001 , .04\r\nain\t\t\t= 0 \r\n;MIDI;VEL;to;SCAN;\r\nistif ampmidi
-  1;\r\nimass ampmidi 2  ;\r\n;;MIDI;;VEL;;To VOLUME;\r\niamp ampmidi ampdb(75)&#47;32767;\r\n;MIDI;PCH;to;SCAN;\r\nkcps
+  1;\r\nimass ampmidi 2  ;\r\n;;MIDI;;VEL;;To VOLUME;\r\niamp ampmidi ampdb(75)/32767;\r\n;MIDI;PCH;to;SCAN;\r\nkcps
   cpsmidib 2  ;\r\n;VOLUME;ADSR;;;;A;;;;;;;;;D;;;;;;;;;S;;;;;;;;;R;;;;;;\r\niatt =
   i (gkatt)\r\nidec =  i (gkdec)\r\nislev = i (gksus)\r\nirel = i (gkrel)\r\naenv
   mxadsr iatt+.02, idec+.01, islev+.01, irel+.01 ;;\r\na2 oscil iamp, kcps, gifnsine;\r\nirate
@@ -66,8 +68,9 @@ excerpt: "MIDI Scanned Synthesis\r\n\r\nIn the spirit of Csound and open source 
   2\r\n  katt    = 0.1\r\n  krel    = .5\r\n  ilook   = .02\r\narevL compress arevL,
   gaoutleft, kthresh, kloknee,\\\r\n khiknee, kratio, katt, krel, ilook\t\r\narevR
   compress arevR, gaoutright, kthresh, kloknee,\\\r\n khiknee, kratio, katt, krel,
-  ilook\t\r\n\touts arevL, arevR\r\n\tendin \t\r\n<&#47;CsInstruments>\r\n<CsScore>\r\n;;TURNON;;\r\nf0
-  360000;\r\n<&#47;CsScore>\r\n<&#47;CsoundSynthesizer>\r\n\r\n[&#47;sourcecode]\r\n\r\nTo
+  ilook\t\r\n\touts arevL, arevR\r\n\tendin \t\r\n\r\n
+\r\n;;TURNON;;\r\nf0
+  360000;\r\n\r\n\r\n\r\n[/sourcecode]\r\n\r\nTo
   run this instrument you have to keep the .csd in the same folder as its helper files,
   circularstring-128 and smartBalance.udo. The download unzips ready to go. \r\n\r\nIf
   you copy and the paste the code and try to run the code, it will give you errors.
@@ -79,7 +82,7 @@ excerpt: "MIDI Scanned Synthesis\r\n\r\nIn the spirit of Csound and open source 
   FILTER           #\t21\t#\r\n#define RESONANCE        #\t22\t#\r\n\r\n#define SUBSINE
   \         #      23      #\r\n\r\n#define CENTERING        #      24      #\r\n#define
   DAMPING          #      25      #\r\n#define STEREOOFFSET     #      26      #\r\n#define
-  RATE \t\t #      1       #\r\n[&#47;sourcecode]\r\n\r\nThe rest of this article
+  RATE \t\t #      1       #\r\n[/sourcecode]\r\n\r\nThe rest of this article
   gets progressively more technical, you have enough so far to start making music
   with scanned synthesis.\r\n"
 wordpress_id: 735
@@ -92,386 +95,1047 @@ categories:
 tags:
 - Csound
 ---
-<p>MIDI Scanned Synthesis</p>
-<p>In the spirit of Csound and open source software, I present my most refined standalone MIDI scanned synthesis Keyboard .csd.<br />
-This instrument will work with any MIDI controller or sequencer. If you check out Andreas Russo's <a href="http:&#47;&#47;www.csounds.com&#47;journal&#47;issue16&#47;audiorouting.html" target="_blank">article<&#47;a> about how to set up Csound MIDI with any DAW. This instrument will work with Andreas'configuration, and you'll be MIDI sequencing with scanned synthesis in no time!</p>
-<p><img src="http:&#47;&#47;www.tophersaunders.com&#47;wp&#47;wp-content&#47;uploads&#47;2012&#47;04&#47;Screen-shot-2012-04-11-at-5.34.27-PM-300x244.png" alt="MIDI scanned synthesis" width="300" height="244" class="aligncenter size-medium wp-image-528" &#47;></p>
-<p><a href="http:&#47;&#47;www.tophersaunders.com&#47;csd&#47;ScanMIDI.zip">ScanMidi.zip 4.57 KB<&#47;a></p>
-<p>[sourcecode collapse="true" gutter="true"]</p>
-<p><CsoundSynthesizer><br />
-<CsOptions><br />
-<&#47;CsOptions><br />
-<CsInstruments><br />
-nchnls = 2<br />
-sr = 44100<br />
-ksmps = 128<br />
-0dbfs = 1</p>
-<p>#define MATRIX		 #"circularstring-128"#</p>
-<p>;       Parameter        CC#<br />
-#define ATTACK		 #	17	#<br />
-#define DECAY		 #	18	#<br />
-#define SUSTAIN	         #	19	#<br />
-#define RELEASE 	 #	20	#</p>
-<p>#define FILTER 	         #	21	#<br />
-#define RESONANCE	 #	22	#</p>
-<p>#define SUBSINE          #   23   #</p>
-<p>#define CENTERING	 #   24   #<br />
-#define DAMPING	         #   25   #<br />
-#define STEREOOFFSET     #   26   #<br />
-#define RATE 		 #   1   #</p>
-<p>;Profiles<br />
-gipos     ftgen 1, 0, 128  ,  10, 1<br />
-gifnvel   ftgen 6, 0, 128  ,  -7, 0, 128, 0.1<br />
-gifnmass  ftgen 2, 0, 128  ,  -7, 1, 128, 1<br />
-gifnstif  ftgen 3, 0, 16384, -23, $MATRIX.<br />
-gifncentr ftgen 4, 0, 128  ,  -7, 1, 128, 2<br />
-gifndamp  ftgen 5, 0, 128  ,  -7, 1, 128, 1<br />
-gifntraj  ftgen 7, 0, 128, -5, .001, 128, 128.<br />
-gifnsine  ftgen 8, 0, 8192, 10, 1</p>
-<p>turnon 2;Reverb instrument</p>
-<p>#include "smartBalance.udo"</p>
-<p>gkatt init .005<br />
-gkdec init .005<br />
-gksus init 1<br />
-gkrel init .002</p>
-<p>gksin init .5<br />
-gkcentr init .1<br />
-gkdamp init -.01<br />
-gkstof init 0<br />
-gkfco init 100000<br />
-gkrez init .2<br />
-gkrate init .007</p>
-<p>ctrlinit 1, $ATTACK, 3<br />
-ctrlinit 1, $DECAY, 3<br />
-ctrlinit 1, $SUSTAIN,  127<br />
-ctrlinit 1, $RELEASE,  1</p>
-<p>ctrlinit 1, $SUBSINE, 64<br />
-ctrlinit 1, $CENTERING, 2<br />
-ctrlinit 1, $DAMPING, 0<br />
-ctrlinit 1, $STEREOOFFSET, 0<br />
-ctrlinit 1, $RATE, 64</p>
-<p>ctrlinit 1, $FILTER, 64<br />
-ctrlinit 1, $RESONANCE, 10<br />
-			instr 1<br />
-		;ADSR;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br />
-		gkatt midic7 $ATTACK , .0051 , 2<br />
-		gkdec midic7 $DECAY , .0051 ,2<br />
-		gksus midic7 $SUSTAIN , .0051 ,1<br />
-		gkrel midic7 $RELEASE ,  .002 , 2<br />
-		;;FUNAMENTAL;;VOL;;;;;;;;;;;;;<br />
-		gksin midic7 $SUBSINE , 0  , 1<br />
-		;;CENTERING;;SCALING;;;;;;;;;;;;;;<br />
-		gkcentr midic7 $CENTERING, 0 , .10<br />
-		;;;DAMPING;;SCALING;;;;;;;;;;;;;;;;<br />
-		gkdamp midic7	$DAMPING , -.11 , 0<br />
-		;;Stereo;;Offset;;;;;;;;;;;;;;;;;;;;;;<br />
-		gkstof midic7 	$STEREOOFFSET , 0 , .1<br />
-		;FILTER;;;;;;;;;;;;;;;;;;;;;;;;;;<br />
-		gkfco midic7 $FILTER , 100 , 10000 , gifntraj<br />
-		gkrez midic7 $RESONANCE , 0 , .7<br />
-		;;;;;Rate;;;;;;;;;;;;;;;;;;;;;;;;;<br />
-		gkrate midic7	$RATE , .001 , .04<br />
-ain			= 0<br />
-;MIDI;VEL;to;SCAN;<br />
-istif ampmidi 1;<br />
-imass ampmidi 2  ;<br />
-;;MIDI;;VEL;;To VOLUME;<br />
-iamp ampmidi ampdb(75)&#47;32767;<br />
-;MIDI;PCH;to;SCAN;<br />
-kcps cpsmidib 2  ;<br />
-;VOLUME;ADSR;;;;A;;;;;;;;;D;;;;;;;;;S;;;;;;;;;R;;;;;;<br />
-iatt = i (gkatt)<br />
-idec =  i (gkdec)<br />
-islev = i (gksus)<br />
-irel = i (gkrel)<br />
-aenv mxadsr iatt+.02, idec+.01, islev+.01, irel+.01 ;;<br />
-a2 oscil iamp, kcps, gifnsine;<br />
-irate = i(gkrate)<br />
-kmass = 1<br />
-kstif = 0.1<br />
-ileft = 0<br />
-iright = 1<br />
-kpos = 0<br />
-kstrngth = 0<br />
-ain = 0<br />
-idisp = 0<br />
-id = 22<br />
-scanu gipos, irate, gifnvel, gifnmass, \<br />
-gifnstif, gifncentr, gifndamp, kmass,  \<br />
-kstif, gkcentr, gkdamp, ileft, iright,\<br />
-kpos, kstrngth, ain, idisp, id<br />
-a1	scans	iamp, kcps,gifntraj, id,   4<br />
-a1 smartBalance a1, a2, iatt+.2<br />
-id2 = 23<br />
-scanu gipos, irate, gifnvel, gifnmass, \<br />
-gifnstif, gifncentr, gifndamp, kmass,  \<br />
-kstif, gkcentr+gkstof, gkdamp, ileft, iright,\<br />
-kpos, kstrngth, ain, idisp, id2<br />
-a3	scans	iamp, kcps,gifntraj, id2,   4<br />
-a3 smartBalance a3, a2, iatt+.2<br />
-asine upsamp gksin;<br />
-aoutleft = a1*aenv + a2*aenv*asine<br />
-aoutright = a3*aenv + a2*aenv*asine<br />
-gaoutleft moogvcf2 aoutleft, gkfco, gkrez;<br />
-gaoutright moogvcf2 aoutright, gkfco, gkrez;<br />
-	outs		gaoutleft,gaoutright;<br />
-;	outs a2, a2<br />
-	endin<br />
-	instr 2<br />
-	arevL, arevR reverbsc gaoutleft,gaoutright, .3, 18000<br />
-  kthresh = 0<br />
-  kloknee = 40<br />
-  khiknee = 60<br />
-  kratio  = 2<br />
-  katt    = 0.1<br />
-  krel    = .5<br />
-  ilook   = .02<br />
-arevL compress arevL, gaoutleft, kthresh, kloknee,\<br />
- khiknee, kratio, katt, krel, ilook<br />
-arevR compress arevR, gaoutright, kthresh, kloknee,\<br />
- khiknee, kratio, katt, krel, ilook<br />
-	outs arevL, arevR<br />
-	endin<br />
-<&#47;CsInstruments><br />
-<CsScore><br />
-;;TURNON;;<br />
-f0 360000;<br />
-<&#47;CsScore><br />
-<&#47;CsoundSynthesizer></p>
-<p>[&#47;sourcecode]</p>
-<p>To run this instrument you have to keep the .csd in the same folder as its helper files, circularstring-128 and smartBalance.udo. The download unzips ready to go. </p>
-<p>If you copy and the paste the code and try to run the code, it will give you errors. </p>
-<p>This instrument has 11 continuous controls, where you can map midi knobs to scanned synthesis controls, ADSR, a filter, and a sub oscillator. This instrument, by default, responds to MIDI Channel 1.</p>
-<p>[sourcecode gutter="true" firstline="12"]<br />
-;       Parameter               CC#<br />
-#define ATTACK		 #	17	#<br />
-#define DECAY		 #	18	#<br />
-#define SUSTAIN	         #	19	#<br />
-#define RELEASE 	 #	20	#</p>
-<p>#define FILTER           #	21	#<br />
-#define RESONANCE        #	22	#</p>
-<p>#define SUBSINE          #      23      #</p>
-<p>#define CENTERING        #      24      #<br />
-#define DAMPING          #      25      #<br />
-#define STEREOOFFSET     #      26      #<br />
-#define RATE 		 #      1       #<br />
-[&#47;sourcecode]</p>
-<p>The rest of this article gets progressively more technical, you have enough so far to start making music with scanned synthesis.<br />
-<a id="more"></a><a id="more-735"></a></p>
-<p>If you're an expert on scanned syntheis. You can edit the Profiles in this block-</p>
-<p>[sourcecode firstline="28" gutter="true"]<br />
-;Profiles<br />
-gipos     ftgen 1, 0, 128  ,  10, 1<br />
-gifnvel   ftgen 6, 0, 128  ,  -7, 0, 128, 0.1<br />
-gifnmass  ftgen 2, 0, 128  ,  -7, 1, 128, 1<br />
-gifnstif  ftgen 3, 0, 16384, -23, $MATRIX.<br />
-gifncentr ftgen 4, 0, 128  ,  -7, 1, 128, 2<br />
-gifndamp  ftgen 5, 0, 128  ,  -7, 1, 128, 1<br />
-gifntraj  ftgen 7, 0, 128, -5, .001, 128, 128.<br />
-gifnsine  ftgen 8, 0, 8192, 10, 1<br />
-[&#47;sourcecode]</p>
-<p>If you want to turn off the reverb, comment out the following line</p>
-<p>[sourcecode firstline="38" gutter="true"]<br />
-turnon 2<br />
-[&#47;sourcecode]</p>
-<p>The reverb is pretty nice, though. It uses Sean Costello's waveguide reverb opcode. </p>
-<p>The signal going to Sean's opcode is put through an expander so that the louder dynamics reverberate more than softer dynamics. </p>
-<p>Then the reverb is ducked by the dry signal, so that the reverb doesn't get in the way of the dry sound.</p>
-<p>[sourcecode firstline="133" gutter="true"]<br />
-instr 2<br />
-arevL, arevR reverbsc gaoutleft,gaoutright, .3,\<br />
- 18000<br />
-  kthresh = 0<br />
-  kloknee = 40<br />
-  khiknee = 60<br />
-  kratio  = 2<br />
-  katt    = 0.1<br />
-  krel    = .5<br />
-  ilook   = .02<br />
-arevL compress arevL, gaoutleft, kthresh,\<br />
-kloknee,khiknee, kratio, katt, krel, ilook<br />
-arevR compress arevR, gaoutright, kthresh,\<br />
-kloknee,khiknee, kratio, katt, krel, ilook<br />
-	outs arevL, arevR<br />
-	endin<br />
-[&#47;sourcecode]</p>
-<p>The next lines import a user defined opcode, a way of encapsulating code for easy re-use.</p>
-<p>[sourcecode firstline="40" gutter="true"]<br />
-#include "smartBalance.udo"<br />
-[&#47;sourcecode]</p>
-<p>Read more about this UDO <a href="http:&#47;&#47;www.tophersaunders.com&#47;wp&#47;?p=672" target="_blank">here<&#47;a></p>
-<p>In order to use Csound with MIDI, you have to initialize not only the MIDI controls<br />
-[sourcecode firstline="42" gutter="true"]<br />
-ctrlinit 1, $ATTACK, 3<br />
-ctrlinit 1, $DECAY, 3<br />
-ctrlinit 1, $SUSTAIN, 127<br />
-ctrlinit 1, $RELEASE, 1</p>
-<p>ctrlinit 1, $SUBSINE, 64<br />
-ctrlinit 1, $CENTERING, 2<br />
-ctrlinit 1, $DAMPING, 0<br />
-ctrlinit 1, $STEREOOFFSET, 0<br />
-ctrlinit 1, $RATE, 64</p>
-<p>ctrlinit 1, $FILTER, 64<br />
-ctrlinit 1, $RESONANCE, 10<br />
-[&#47;sourcecode]</p>
-<p>, but also you have to initialize the global variables used by the instrument, or the model(if you're thinking Model-View-Controller).</p>
-<p>[sourcecode firstline="42"]<br />
-gkatt init .005<br />
-gkdec init .005<br />
-gksus init 1<br />
-gkrel init .002</p>
-<p>gksin init .5<br />
-gkcentr init .1<br />
-gkdamp init -.01<br />
-gkstof init 0<br />
-gkfco init 100000<br />
-gkrez init .2<br />
-gkrate init .007<br />
-[&#47;sourcecode]</p>
-<p>Ah so lets get to the instrument, here's where we actually read the values from the MIDI controller.</p>
-<p>[sourcecode firstline="68" gutter="true"]<br />
-	instr 1<br />
-;ADSR;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br />
-gkatt midic7 $ATTACK , .0051 , 2<br />
-gkdec midic7 $DECAY , .0051 ,2<br />
-gksus midic7 $SUSTAIN , .0051 ,1<br />
-gkrel midic7 $RELEASE ,  .002 , 2<br />
-;;FUNAMENTAL;;VOL;;;;;;;;;;;;;<br />
-gksin midic7 $SUBSINE , 0  , 1<br />
-;;CENTERING;;SCALING;;;;;;;;;;;;;;<br />
-gkcentr midic7 $CENTERING, 0 , .10<br />
-;;;DAMPING;;SCALING;;;;;;;;;;;;;;;;<br />
-gkdamp midic7	$DAMPING , -.11 , 0<br />
-;;Stereo;;Offset;;;;;;;;;;;;;;;;;;;;;;<br />
-gkstof midic7 	$STEREOOFFSET , 0 , .1<br />
-;FILTER;;;;;;;;;;;;;;;;;;;;;;;;;;<br />
-gkfco midic7 $FILTER , 100 , 10000 , gifntraj<br />
-gkrez midic7 $RESONANCE , 0 , .7<br />
-;;;;;Rate;;;;;;;;;;;;;;;;;;;;;;;;;<br />
-gkrate midic7	$RATE , .001 , .04<br />
-[&#47;sourcecode]</p>
-<p>This instrument does not use audio injection so we set the required ain variable to 0</p>
-<p>[sourcecode firstline="87" gutter="true"]<br />
-ain = 0<br />
-[&#47;sourcecode]</p>
-<p>The mass and stiffness of the scanned system is influenced by MIDI velocity.</p>
-<p>[sourcecode firstline="88" gutter="true"]<br />
-;MIDI;VEL;to;SCAN;<br />
-istif ampmidi 1;<br />
-imass ampmidi 2  ;<br />
-[&#47;sourcecode]</p>
-<p>Also, MIDI key velocity should have an effect on overall amplitude.</p>
-<p>[sourcecode firstline="91"]<br />
-;;MIDI;;VEL;;To VOLUME;<br />
-iamp ampmidi ampdb(75)&#47;32767;<br />
-[&#47;sourcecode]</p>
-<p>Lets get pitch from the key, with pitchbend.</p>
-<p>[sourcecode firstline="94" gutter="true"]<br />
-kcps cpsmidib 2  ;<br />
-[&#47;sourcecode]</p>
-<p>if you want to change the range of the pitch bend in semitones, you edit this line. Default is 2 semitones.</p>
-<p>The lines below generate our ADSR envelope to be applied to the signal later. Notice the MIDI control of ADSR values.</p>
-<p>[sourcecode firstline="95" gutter="true"]<br />
-;VOLUME;ADSR;<br />
-iatt = i (gkatt)     ; A<br />
-idec =  i (gkdec)    ; D<br />
-islev = i (gksus)    ; S<br />
-irel = i (gkrel)     ; R<br />
-aenv mxadsr iatt+.02,idec+.01,islev+.01,irel+.01<br />
-[&#47;sourcecode]</p>
-<p>The next lines generate a sub oscillator tone</p>
-<p>[sourcecode firstline="101" gutter="true"]<br />
-a2 oscil iamp, kcps, gifnsine;<br />
-[&#47;sourcecode]</p>
-<p>If you wish to change the flavor of sub oscillator tone, (maybe you'd prefer a Sawtooth wave), edit this line of code, found back in the header with the profiles</p>
-<p>[sourcecode firstline="36" gutter="true"]<br />
-gifnsine  ftgen 8, 0, 8192, 10, 1<br />
-[&#47;sourcecode]</p>
-<p>The next lines set up Paris Smaragdis' opcode <strong>scans<&#47;strong>. There are a total of 2 scanned oscillators, for stereo manipulation. This is the first one.</p>
-<p>[sourcecode firstline="102" gutter="true"]<br />
-irate = i(gkrate)<br />
-kmass = 1<br />
-kstif = 0.1<br />
-ileft = 0<br />
-iright = 1<br />
-kpos = 0<br />
-kstrngth = 0<br />
-ain = 0<br />
-idisp = 0<br />
-id = 22<br />
-scanu gipos, irate, gifnvel, gifnmass, \<br />
-gifnstif, gifncentr, gifndamp, kmass,  \<br />
-kstif, gkcentr, gkdamp, ileft, iright,\<br />
-kpos, kstrngth, ain, idisp, id<br />
-[&#47;sourcecode]</p>
-<p>I tired to keep the same variable naming scheme for scanu as the Csound manual entry.</p>
-<p>Now that our scanned wave is set up, lets scan it!</p>
-<p>[sourcecode firstline="116"]<br />
-a1	scans	iamp, kcps,gifntraj, id,   4<br />
-[&#47;sourcecode]</p>
-<p>we can edit scan trajectories in this line back in the profile header<br />
-[sourcecode firstline="35" gutter="true"]<br />
-gifntraj  ftgen 7, 0, 128, -5, .001, 128, 128.<br />
-[&#47;sourcecode]</p>
-<p>Replacing this line with</p>
-<p>[sourcecode firstline="35" gutter="true"]<br />
-gifntraj  ftgen 7, 0, 128, -7, 0, 128, 128.<br />
-[&#47;sourcecode]</p>
-<p>is a quick hack to get a different sound.</p>
-<p>our next line in the instrument calls the definition of the smart balance .udo I discussed in one of my previous <a href="http:&#47;&#47;www.tophersaunders.com&#47;wp&#47;?p=672" target="_blank">articles<&#47;a></p>
-<p>[sourcecode firstline="117" gutter="true"]<br />
-a1 smartBalance a1, a2, iatt+.2<br />
-[&#47;sourcecode]</p>
-<p>The next lines set up the second scanned oscillator<br />
-[sourcecode firstline="119" gutter="true"]</p>
-<p>scanu gipos, irate, gifnvel, gifnmass, \<br />
-gifnstif, gifncentr, gifndamp, kmass, \<br />
-kstif, gkcentr+gkstof, gkdamp, ileft, iright,\<br />
-kpos, kstrngth, ain, idisp, id2<br />
-a3 scans iamp, kcps,gifntraj, id2, 4<br />
-[&#47;sourcecode]<br />
-except that now we have another variable gkstof in this part of the line<br />
-[sourcecode firstline="119" highlight="121" gutter="true"]<br />
-scanu gipos, irate, gifnvel, gifnmass, \<br />
-gifnstif, gifncentr, gifndamp, kmass, \<br />
-kstif, gkcentr+gkstof, gkdamp, ileft, iright,\<br />
-kpos, kstrngth, ain, idisp, id2<br />
-a3 scans iamp, kcps,gifntraj, id2, 4<br />
-[&#47;sourcecode]</p>
-<p>gkstof sends a little bit more centering force to one of the oscillators, giving a stereo effect that is unique to scanned synthesis.</p>
-<p>Next lets upsample our sub oscillator volume control and mix the sub oscillator with the scanned oscillators</p>
-<p>[sourcecode firstline="125" gutter="true"]<br />
-asine upsamp gksin;<br />
-aoutleft = a1*aenv + a2*aenv*asine<br />
-aoutright = a3*aenv + a2*aenv*asine<br />
-[&#47;sourcecode]</p>
-<p>at the final stage we apply Hans Mikelson and John Ffitch's opcode moogvcf, a warm filter with resonance.</p>
-<p>[sourcecode firstline="128" gutter="true"]<br />
-gaoutleft moogvcf2 aoutleft, gkfco, gkrez;<br />
-gaoutright moogvcf2 aoutright, gkfco, gkrez;<br />
-[&#47;sourcecode]</p>
-<p>and send our signal to the dac using the opcode outs. If you set up your configuration like Andrea's tutorial, then this is where the signal gets sent out to Soundflower, or JACK.</p>
-<p>[sourcecode firstline="132" gutter="true"]<br />
-	outs		gaoutleft,gaoutright;<br />
-        endin<br />
-[&#47;sourcecode]</p>
-<p>These are global variables so they can also be sent to the reverb instrument mentioned earlier in the article</p>
-<p>Finally, this trick keeps Csound running for 360,000 seconds unless we quit, so that we can send Csound MIDI.</p>
-<p>[sourcecode firstline="148" gutter="true"]<br />
-<&#47;CsInstruments><br />
-<CsScore><br />
-;;TURNON;;<br />
-f0 360000;<br />
-<&#47;CsScore><br />
-<&#47;CsoundSynthesizer><br />
-[&#47;sourcecode]</p>
-<p>This line ensures that the instrument is compatible with earlier versions of Csound. I think the newest Csound version doesn't need this line<br />
-[sourcecode firstline="148" highlight="151" gutter="true"]<br />
-<&#47;CsInstruments><br />
-<CsScore><br />
-;;TURNON;;<br />
-f0 360000;<br />
-<&#47;CsScore><br />
-<&#47;CsoundSynthesizer><br />
-[&#47;sourcecode]<br />
-and will stay running if left blank until we quit Csound, but I like to keep it in there just in case someone has an old version.</p>
+
+MIDI Scanned Synthesis
+
+In the spirit of Csound and open source software, I present my most refined standalone MIDI scanned synthesis Keyboard .csd.
+
+
+This instrument will work with any MIDI controller or sequencer. If you check out Andreas Russo's 
+[article about how to set up Csound MIDI with any DAW. This instrument will work with Andreas'configuration, and you'll be MIDI sequencing with scanned synthesis in no time!](http://www.csounds.com/journal/issue16/audiorouting.html)
+
+![MIDI scanned synthesis](http://www.tophersaunders.com/wp/wp-content/uploads/2012/04/Screen-shot-2012-04-11-at-5.34.27-PM-300x244.png)
+
+[ScanMidi.zip 4.57 KB](http://www.tophersaunders.com/csd/ScanMIDI.zip)
+
+[sourcecode collapse="true" gutter="true"]
+
+nchnls = 2
+
+
+sr = 44100
+
+
+ksmps = 128
+
+
+0dbfs = 1
+
+#define MATRIX		 #"circularstring-128"#
+
+;       Parameter        CC#
+
+
+#define ATTACK		 #	17	#
+
+
+#define DECAY		 #	18	#
+
+
+#define SUSTAIN	         #	19	#
+
+
+#define RELEASE 	 #	20	#
+
+#define FILTER 	         #	21	#
+
+
+#define RESONANCE	 #	22	#
+
+#define SUBSINE          #   23   #
+
+#define CENTERING	 #   24   #
+
+
+#define DAMPING	         #   25   #
+
+
+#define STEREOOFFSET     #   26   #
+
+
+#define RATE 		 #   1   #
+
+;Profiles
+
+
+gipos     ftgen 1, 0, 128  ,  10, 1
+
+
+gifnvel   ftgen 6, 0, 128  ,  -7, 0, 128, 0.1
+
+
+gifnmass  ftgen 2, 0, 128  ,  -7, 1, 128, 1
+
+
+gifnstif  ftgen 3, 0, 16384, -23, $MATRIX.
+
+
+gifncentr ftgen 4, 0, 128  ,  -7, 1, 128, 2
+
+
+gifndamp  ftgen 5, 0, 128  ,  -7, 1, 128, 1
+
+
+gifntraj  ftgen 7, 0, 128, -5, .001, 128, 128.
+
+
+gifnsine  ftgen 8, 0, 8192, 10, 1
+
+turnon 2;Reverb instrument
+
+#include "smartBalance.udo"
+
+gkatt init .005
+
+
+gkdec init .005
+
+
+gksus init 1
+
+
+gkrel init .002
+
+gksin init .5
+
+
+gkcentr init .1
+
+
+gkdamp init -.01
+
+
+gkstof init 0
+
+
+gkfco init 100000
+
+
+gkrez init .2
+
+
+gkrate init .007
+
+ctrlinit 1, $ATTACK, 3
+
+
+ctrlinit 1, $DECAY, 3
+
+
+ctrlinit 1, $SUSTAIN,  127
+
+
+ctrlinit 1, $RELEASE,  1
+
+ctrlinit 1, $SUBSINE, 64
+
+
+ctrlinit 1, $CENTERING, 2
+
+
+ctrlinit 1, $DAMPING, 0
+
+
+ctrlinit 1, $STEREOOFFSET, 0
+
+
+ctrlinit 1, $RATE, 64
+
+ctrlinit 1, $FILTER, 64
+
+
+ctrlinit 1, $RESONANCE, 10
+
+
+			instr 1
+
+
+		;ADSR;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+		gkatt midic7 $ATTACK , .0051 , 2
+
+
+		gkdec midic7 $DECAY , .0051 ,2
+
+
+		gksus midic7 $SUSTAIN , .0051 ,1
+
+
+		gkrel midic7 $RELEASE ,  .002 , 2
+
+
+		;;FUNAMENTAL;;VOL;;;;;;;;;;;;;
+
+
+		gksin midic7 $SUBSINE , 0  , 1
+
+
+		;;CENTERING;;SCALING;;;;;;;;;;;;;;
+
+
+		gkcentr midic7 $CENTERING, 0 , .10
+
+
+		;;;DAMPING;;SCALING;;;;;;;;;;;;;;;;
+
+
+		gkdamp midic7	$DAMPING , -.11 , 0
+
+
+		;;Stereo;;Offset;;;;;;;;;;;;;;;;;;;;;;
+
+
+		gkstof midic7 	$STEREOOFFSET , 0 , .1
+
+
+		;FILTER;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+		gkfco midic7 $FILTER , 100 , 10000 , gifntraj
+
+
+		gkrez midic7 $RESONANCE , 0 , .7
+
+
+		;;;;;Rate;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+		gkrate midic7	$RATE , .001 , .04
+
+
+ain			= 0
+
+
+;MIDI;VEL;to;SCAN;
+
+
+istif ampmidi 1;
+
+
+imass ampmidi 2  ;
+
+
+;;MIDI;;VEL;;To VOLUME;
+
+
+iamp ampmidi ampdb(75)/32767;
+
+
+;MIDI;PCH;to;SCAN;
+
+
+kcps cpsmidib 2  ;
+
+
+;VOLUME;ADSR;;;;A;;;;;;;;;D;;;;;;;;;S;;;;;;;;;R;;;;;;
+
+
+iatt = i (gkatt)
+
+
+idec =  i (gkdec)
+
+
+islev = i (gksus)
+
+
+irel = i (gkrel)
+
+
+aenv mxadsr iatt+.02, idec+.01, islev+.01, irel+.01 ;;
+
+
+a2 oscil iamp, kcps, gifnsine;
+
+
+irate = i(gkrate)
+
+
+kmass = 1
+
+
+kstif = 0.1
+
+
+ileft = 0
+
+
+iright = 1
+
+
+kpos = 0
+
+
+kstrngth = 0
+
+
+ain = 0
+
+
+idisp = 0
+
+
+id = 22
+
+
+scanu gipos, irate, gifnvel, gifnmass, \
+
+
+gifnstif, gifncentr, gifndamp, kmass,  \
+
+
+kstif, gkcentr, gkdamp, ileft, iright,\
+
+
+kpos, kstrngth, ain, idisp, id
+
+
+a1	scans	iamp, kcps,gifntraj, id,   4
+
+
+a1 smartBalance a1, a2, iatt+.2
+
+
+id2 = 23
+
+
+scanu gipos, irate, gifnvel, gifnmass, \
+
+
+gifnstif, gifncentr, gifndamp, kmass,  \
+
+
+kstif, gkcentr+gkstof, gkdamp, ileft, iright,\
+
+
+kpos, kstrngth, ain, idisp, id2
+
+
+a3	scans	iamp, kcps,gifntraj, id2,   4
+
+
+a3 smartBalance a3, a2, iatt+.2
+
+
+asine upsamp gksin;
+
+
+aoutleft = a1*aenv + a2*aenv*asine
+
+
+aoutright = a3*aenv + a2*aenv*asine
+
+
+gaoutleft moogvcf2 aoutleft, gkfco, gkrez;
+
+
+gaoutright moogvcf2 aoutright, gkfco, gkrez;
+
+
+	outs		gaoutleft,gaoutright;
+
+
+;	outs a2, a2
+
+
+	endin
+
+
+	instr 2
+
+
+	arevL, arevR reverbsc gaoutleft,gaoutright, .3, 18000
+
+
+  kthresh = 0
+
+
+  kloknee = 40
+
+
+  khiknee = 60
+
+
+  kratio  = 2
+
+
+  katt    = 0.1
+
+
+  krel    = .5
+
+
+  ilook   = .02
+
+
+arevL compress arevL, gaoutleft, kthresh, kloknee,\
+
+
+ khiknee, kratio, katt, krel, ilook
+
+
+arevR compress arevR, gaoutright, kthresh, kloknee,\
+
+
+ khiknee, kratio, katt, krel, ilook
+
+
+	outs arevL, arevR
+
+
+	endin
+
+
+
+
+
+
+;;TURNON;;
+
+
+f0 360000;
+
+[/sourcecode]
+
+To run this instrument you have to keep the .csd in the same folder as its helper files, circularstring-128 and smartBalance.udo. The download unzips ready to go.
+
+If you copy and the paste the code and try to run the code, it will give you errors.
+
+This instrument has 11 continuous controls, where you can map midi knobs to scanned synthesis controls, ADSR, a filter, and a sub oscillator. This instrument, by default, responds to MIDI Channel 1.
+
+[sourcecode gutter="true" firstline="12"]
+
+
+;       Parameter               CC#
+
+
+#define ATTACK		 #	17	#
+
+
+#define DECAY		 #	18	#
+
+
+#define SUSTAIN	         #	19	#
+
+
+#define RELEASE 	 #	20	#
+
+#define FILTER           #	21	#
+
+
+#define RESONANCE        #	22	#
+
+#define SUBSINE          #      23      #
+
+#define CENTERING        #      24      #
+
+
+#define DAMPING          #      25      #
+
+
+#define STEREOOFFSET     #      26      #
+
+
+#define RATE 		 #      1       #
+
+
+[/sourcecode]
+
+The rest of this article gets progressively more technical, you have enough so far to start making music with scanned synthesis.
+
+
+
+[]()[]()
+
+If you're an expert on scanned syntheis. You can edit the Profiles in this block-
+
+[sourcecode firstline="28" gutter="true"]
+
+
+;Profiles
+
+
+gipos     ftgen 1, 0, 128  ,  10, 1
+
+
+gifnvel   ftgen 6, 0, 128  ,  -7, 0, 128, 0.1
+
+
+gifnmass  ftgen 2, 0, 128  ,  -7, 1, 128, 1
+
+
+gifnstif  ftgen 3, 0, 16384, -23, $MATRIX.
+
+
+gifncentr ftgen 4, 0, 128  ,  -7, 1, 128, 2
+
+
+gifndamp  ftgen 5, 0, 128  ,  -7, 1, 128, 1
+
+
+gifntraj  ftgen 7, 0, 128, -5, .001, 128, 128.
+
+
+gifnsine  ftgen 8, 0, 8192, 10, 1
+
+
+[/sourcecode]
+
+If you want to turn off the reverb, comment out the following line
+
+[sourcecode firstline="38" gutter="true"]
+
+
+turnon 2
+
+
+[/sourcecode]
+
+The reverb is pretty nice, though. It uses Sean Costello's waveguide reverb opcode.
+
+The signal going to Sean's opcode is put through an expander so that the louder dynamics reverberate more than softer dynamics.
+
+Then the reverb is ducked by the dry signal, so that the reverb doesn't get in the way of the dry sound.
+
+[sourcecode firstline="133" gutter="true"]
+
+
+instr 2
+
+
+arevL, arevR reverbsc gaoutleft,gaoutright, .3,\
+
+
+ 18000
+
+
+  kthresh = 0
+
+
+  kloknee = 40
+
+
+  khiknee = 60
+
+
+  kratio  = 2
+
+
+  katt    = 0.1
+
+
+  krel    = .5
+
+
+  ilook   = .02
+
+
+arevL compress arevL, gaoutleft, kthresh,\
+
+
+kloknee,khiknee, kratio, katt, krel, ilook
+
+
+arevR compress arevR, gaoutright, kthresh,\
+
+
+kloknee,khiknee, kratio, katt, krel, ilook
+
+
+	outs arevL, arevR
+
+
+	endin
+
+
+[/sourcecode]
+
+The next lines import a user defined opcode, a way of encapsulating code for easy re-use.
+
+[sourcecode firstline="40" gutter="true"]
+
+
+#include "smartBalance.udo"
+
+
+[/sourcecode]
+
+Read more about this UDO 
+[here](http://www.tophersaunders.com/wp/?p=672)
+
+In order to use Csound with MIDI, you have to initialize not only the MIDI controls
+
+
+[sourcecode firstline="42" gutter="true"]
+
+
+ctrlinit 1, $ATTACK, 3
+
+
+ctrlinit 1, $DECAY, 3
+
+
+ctrlinit 1, $SUSTAIN, 127
+
+
+ctrlinit 1, $RELEASE, 1
+
+ctrlinit 1, $SUBSINE, 64
+
+
+ctrlinit 1, $CENTERING, 2
+
+
+ctrlinit 1, $DAMPING, 0
+
+
+ctrlinit 1, $STEREOOFFSET, 0
+
+
+ctrlinit 1, $RATE, 64
+
+ctrlinit 1, $FILTER, 64
+
+
+ctrlinit 1, $RESONANCE, 10
+
+
+[/sourcecode]
+
+, but also you have to initialize the global variables used by the instrument, or the model(if you're thinking Model-View-Controller).
+
+[sourcecode firstline="42"]
+
+
+gkatt init .005
+
+
+gkdec init .005
+
+
+gksus init 1
+
+
+gkrel init .002
+
+gksin init .5
+
+
+gkcentr init .1
+
+
+gkdamp init -.01
+
+
+gkstof init 0
+
+
+gkfco init 100000
+
+
+gkrez init .2
+
+
+gkrate init .007
+
+
+[/sourcecode]
+
+Ah so lets get to the instrument, here's where we actually read the values from the MIDI controller.
+
+[sourcecode firstline="68" gutter="true"]
+
+
+	instr 1
+
+
+;ADSR;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+gkatt midic7 $ATTACK , .0051 , 2
+
+
+gkdec midic7 $DECAY , .0051 ,2
+
+
+gksus midic7 $SUSTAIN , .0051 ,1
+
+
+gkrel midic7 $RELEASE ,  .002 , 2
+
+
+;;FUNAMENTAL;;VOL;;;;;;;;;;;;;
+
+
+gksin midic7 $SUBSINE , 0  , 1
+
+
+;;CENTERING;;SCALING;;;;;;;;;;;;;;
+
+
+gkcentr midic7 $CENTERING, 0 , .10
+
+
+;;;DAMPING;;SCALING;;;;;;;;;;;;;;;;
+
+
+gkdamp midic7	$DAMPING , -.11 , 0
+
+
+;;Stereo;;Offset;;;;;;;;;;;;;;;;;;;;;;
+
+
+gkstof midic7 	$STEREOOFFSET , 0 , .1
+
+
+;FILTER;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+gkfco midic7 $FILTER , 100 , 10000 , gifntraj
+
+
+gkrez midic7 $RESONANCE , 0 , .7
+
+
+;;;;;Rate;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+gkrate midic7	$RATE , .001 , .04
+
+
+[/sourcecode]
+
+This instrument does not use audio injection so we set the required ain variable to 0
+
+[sourcecode firstline="87" gutter="true"]
+
+
+ain = 0
+
+
+[/sourcecode]
+
+The mass and stiffness of the scanned system is influenced by MIDI velocity.
+
+[sourcecode firstline="88" gutter="true"]
+
+
+;MIDI;VEL;to;SCAN;
+
+
+istif ampmidi 1;
+
+
+imass ampmidi 2  ;
+
+
+[/sourcecode]
+
+Also, MIDI key velocity should have an effect on overall amplitude.
+
+[sourcecode firstline="91"]
+
+
+;;MIDI;;VEL;;To VOLUME;
+
+
+iamp ampmidi ampdb(75)/32767;
+
+
+[/sourcecode]
+
+Lets get pitch from the key, with pitchbend.
+
+[sourcecode firstline="94" gutter="true"]
+
+
+kcps cpsmidib 2  ;
+
+
+[/sourcecode]
+
+if you want to change the range of the pitch bend in semitones, you edit this line. Default is 2 semitones.
+
+The lines below generate our ADSR envelope to be applied to the signal later. Notice the MIDI control of ADSR values.
+
+[sourcecode firstline="95" gutter="true"]
+
+
+;VOLUME;ADSR;
+
+
+iatt = i (gkatt)     ; A
+
+
+idec =  i (gkdec)    ; D
+
+
+islev = i (gksus)    ; S
+
+
+irel = i (gkrel)     ; R
+
+
+aenv mxadsr iatt+.02,idec+.01,islev+.01,irel+.01
+
+
+[/sourcecode]
+
+The next lines generate a sub oscillator tone
+
+[sourcecode firstline="101" gutter="true"]
+
+
+a2 oscil iamp, kcps, gifnsine;
+
+
+[/sourcecode]
+
+If you wish to change the flavor of sub oscillator tone, (maybe you'd prefer a Sawtooth wave), edit this line of code, found back in the header with the profiles
+
+[sourcecode firstline="36" gutter="true"]
+
+
+gifnsine  ftgen 8, 0, 8192, 10, 1
+
+
+[/sourcecode]
+
+The next lines set up Paris Smaragdis' opcode 
+**scans. There are a total of 2 scanned oscillators, for stereo manipulation. This is the first one.**
+
+[sourcecode firstline="102" gutter="true"]
+
+
+irate = i(gkrate)
+
+
+kmass = 1
+
+
+kstif = 0.1
+
+
+ileft = 0
+
+
+iright = 1
+
+
+kpos = 0
+
+
+kstrngth = 0
+
+
+ain = 0
+
+
+idisp = 0
+
+
+id = 22
+
+
+scanu gipos, irate, gifnvel, gifnmass, \
+
+
+gifnstif, gifncentr, gifndamp, kmass,  \
+
+
+kstif, gkcentr, gkdamp, ileft, iright,\
+
+
+kpos, kstrngth, ain, idisp, id
+
+
+[/sourcecode]
+
+I tired to keep the same variable naming scheme for scanu as the Csound manual entry.
+
+Now that our scanned wave is set up, lets scan it!
+
+[sourcecode firstline="116"]
+
+
+a1	scans	iamp, kcps,gifntraj, id,   4
+
+
+[/sourcecode]
+
+we can edit scan trajectories in this line back in the profile header
+
+
+[sourcecode firstline="35" gutter="true"]
+
+
+gifntraj  ftgen 7, 0, 128, -5, .001, 128, 128.
+
+
+[/sourcecode]
+
+Replacing this line with
+
+[sourcecode firstline="35" gutter="true"]
+
+
+gifntraj  ftgen 7, 0, 128, -7, 0, 128, 128.
+
+
+[/sourcecode]
+
+is a quick hack to get a different sound.
+
+our next line in the instrument calls the definition of the smart balance .udo I discussed in one of my previous 
+[articles](http://www.tophersaunders.com/wp/?p=672)
+
+[sourcecode firstline="117" gutter="true"]
+
+
+a1 smartBalance a1, a2, iatt+.2
+
+
+[/sourcecode]
+
+The next lines set up the second scanned oscillator
+
+
+[sourcecode firstline="119" gutter="true"]
+
+scanu gipos, irate, gifnvel, gifnmass, \
+
+
+gifnstif, gifncentr, gifndamp, kmass, \
+
+
+kstif, gkcentr+gkstof, gkdamp, ileft, iright,\
+
+
+kpos, kstrngth, ain, idisp, id2
+
+
+a3 scans iamp, kcps,gifntraj, id2, 4
+
+
+[/sourcecode]
+
+
+except that now we have another variable gkstof in this part of the line
+
+
+[sourcecode firstline="119" highlight="121" gutter="true"]
+
+
+scanu gipos, irate, gifnvel, gifnmass, \
+
+
+gifnstif, gifncentr, gifndamp, kmass, \
+
+
+kstif, gkcentr+gkstof, gkdamp, ileft, iright,\
+
+
+kpos, kstrngth, ain, idisp, id2
+
+
+a3 scans iamp, kcps,gifntraj, id2, 4
+
+
+[/sourcecode]
+
+gkstof sends a little bit more centering force to one of the oscillators, giving a stereo effect that is unique to scanned synthesis.
+
+Next lets upsample our sub oscillator volume control and mix the sub oscillator with the scanned oscillators
+
+[sourcecode firstline="125" gutter="true"]
+
+
+asine upsamp gksin;
+
+
+aoutleft = a1*aenv + a2*aenv*asine
+
+
+aoutright = a3*aenv + a2*aenv*asine
+
+
+[/sourcecode]
+
+at the final stage we apply Hans Mikelson and John Ffitch's opcode moogvcf, a warm filter with resonance.
+
+[sourcecode firstline="128" gutter="true"]
+
+
+gaoutleft moogvcf2 aoutleft, gkfco, gkrez;
+
+
+gaoutright moogvcf2 aoutright, gkfco, gkrez;
+
+
+[/sourcecode]
+
+and send our signal to the dac using the opcode outs. If you set up your configuration like Andrea's tutorial, then this is where the signal gets sent out to Soundflower, or JACK.
+
+[sourcecode firstline="132" gutter="true"]
+
+
+	outs		gaoutleft,gaoutright;
+
+
+        endin
+
+
+[/sourcecode]
+
+These are global variables so they can also be sent to the reverb instrument mentioned earlier in the article
+
+Finally, this trick keeps Csound running for 360,000 seconds unless we quit, so that we can send Csound MIDI.
+
+[sourcecode firstline="148" gutter="true"]
+
+
+
+
+
+
+;;TURNON;;
+
+
+f0 360000;
+
+
+
+
+
+
+
+
+[/sourcecode]
+
+This line ensures that the instrument is compatible with earlier versions of Csound. I think the newest Csound version doesn't need this line
+
+
+[sourcecode firstline="148" highlight="151" gutter="true"]
+
+
+
+
+
+
+;;TURNON;;
+
+
+f0 360000;
+
+
+
+
+
+
+
+
+[/sourcecode]
+
+
+and will stay running if left blank until we quit Csound, but I like to keep it in there just in case someone has an old version.](\"http://www.tophersaunders.com/csd/ScanMIDI.zip\")

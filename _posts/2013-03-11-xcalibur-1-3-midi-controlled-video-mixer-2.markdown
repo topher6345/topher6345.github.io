@@ -21,7 +21,8 @@ categories:
 tags:
 - MaxMSP
 - Jitter
----
-<p><iframe width="420" height="215" src="&#47;&#47;www.youtube.com&#47;embed&#47;j5tdcSNVlSw" frameborder="0" allowfullscreen><&#47;iframe><br />
-Check out this video I made for the<a href="http:&#47;&#47;www.bostonstringplayers.org&#47;" target="_blank">Boston String Players.<&#47;a><br />
-The tune was written by Bjork, arranged by Chad Grey, and performed by the BSP conducted by Motoki Tanaka</p>
+---Check out this video I made for the
+[Boston String Players.
+
+
+The tune was written by Bjork, arranged by Chad Grey, and performed by the BSP conducted by Motoki Tanaka](http://www.bostonstringplayers.org/)
