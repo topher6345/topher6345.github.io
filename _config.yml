@@ -9,4 +9,4 @@ twitter: snophort
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+permalink: :title

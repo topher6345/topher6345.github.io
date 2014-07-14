@@ -3,11 +3,7 @@ layout: post
 status: publish
 published: true
 title: A real-time video mixing system in MaxMSP-Jitter
-author:
-  display_name: Topher
-  login: admin
-  email: csaunders@berklee.net
-  url: http://www.tophersaunders.com
+author: Topher
 author_login: admin
 author_email: csaunders@berklee.net
 author_url: http://www.tophersaunders.com
@@ -28,10 +24,7 @@ tags:
 
 In this post I'll give a brief walkthrough of a live video performance system I use to real-time video mixing for my gigs as VJ.
 
-[caption id="attachment_1213" align="aligncenter" width="300"]
-[![Screen Shot of xCalibur 1.3](http://www.tophersaunders.com/wp/wp-content/uploads/2013/03/xcal1-300x177.png) Click to view full size.[/caption]](http://www.tophersaunders.com/wp/wp-content/uploads/2013/03/xcal1.png)
-
-[]()[]()
+[img](http://www.tophersaunders.com/wp/wp-content/uploads/2013/03/xcal1.png)
 
 Step 1: download and install this -
 
