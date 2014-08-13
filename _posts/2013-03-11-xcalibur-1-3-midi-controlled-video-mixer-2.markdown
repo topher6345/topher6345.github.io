@@ -3,11 +3,7 @@ layout: post
 status: publish
 published: true
 title: Video to Boston String Players' "Unravel"
-author:
-  display_name: Topher
-  login: admin
-  email: csaunders@berklee.net
-  url: http://www.tophersaunders.com
+author: Topher
 author_login: admin
 author_email: csaunders@berklee.net
 author_url: http://www.tophersaunders.com

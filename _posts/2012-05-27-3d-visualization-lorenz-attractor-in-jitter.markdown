@@ -3,11 +3,7 @@ layout: post
 status: publish
 published: true
 title: 3D Visualization of Lorenz Attractor In Jitter
-author:
-  display_name: Topher
-  login: admin
-  email: csaunders@berklee.net
-  url: http://www.tophersaunders.com
+author: Topher
 author_login: admin
 author_email: csaunders@berklee.net
 author_url: http://www.tophersaunders.com
@@ -23,7 +19,9 @@ tags:
 - Jitter
 - Csound
 - OpenGL
----A video I made visualizing the Lorenz Attractor in Jitter and OpenGL.
+---
+
+A video I made visualizing the Lorenz Attractor in Jitter and OpenGL.
 
 
 

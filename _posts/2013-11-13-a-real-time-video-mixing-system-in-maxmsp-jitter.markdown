@@ -4,15 +4,10 @@ status: publish
 published: true
 title: A real-time video mixing system in MaxMSP-Jitter
 author: Topher
-author_login: admin
-author_email: csaunders@berklee.net
-author_url: http://www.tophersaunders.com
 excerpt: "In this post I'll give a brief walkthrough of a live video performance
   system I use to real-time video mixing for my gigs as VJ.\r\n\r\n[caption
   id=\"attachment_1213\" align=\"aligncenter\" width=\"300\"]
 [![\"Screen](\"http://www.tophersaunders.com/wp/wp-content/uploads/2013/03/xcal1-300x177.png\") Click to view full size.[/caption]\r\n\r\n"
-wordpress_id: 1584
-wordpress_url: http://localhost:8888/wp/?p=1584
 date: '2013-11-13 00:01:59 -0800'
 date_gmt: '2013-11-13 05:01:59 -0800'
 categories:

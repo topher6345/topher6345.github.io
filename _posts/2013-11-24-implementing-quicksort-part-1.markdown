@@ -4,9 +4,6 @@ status: publish
 published: true
 title: Implementing quicksort Part 1
 author: Topher
-author_login: admin
-author_email: csaunders@berklee.net
-author_url: http://www.tophersaunders.com
 excerpt: "Let's examine a classic computer science question - 
 how to alphabetically
   sort words.\r\n\r\nIn the first part, we'll examine the problem and set

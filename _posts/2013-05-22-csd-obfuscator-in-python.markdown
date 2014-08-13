@@ -4,14 +4,9 @@ status: publish
 published: true
 title: Csound .csd Obfuscator in Python
 author: Topher
-author_login: admin
-author_email: csaunders@berklee.net
-author_url: http://www.tophersaunders.com
 excerpt: "In this post I'll walk you through how I built a Csound csd obfuscator in
   Python.\r\n\r\nCheck it out on Github:\r\n\r\n
 [\r\n"
-wordpress_id: 1267
-wordpress_url: http://www.tophersaunders.com/wp/?p=1267
 date: '2013-05-22 02:48:47 -0700'
 date_gmt: '2013-05-22 06:48:47 -0700'
 categories:

@@ -3,14 +3,7 @@ layout: post
 status: publish
 published: true
 title: Exporting Quicktime Movies with Processing - Part I
-author:
-  display_name: Topher
-  login: admin
-  email: csaunders@berklee.net
-  url: http://www.tophersaunders.com
-author_login: admin
-author_email: csaunders@berklee.net
-author_url: http://www.tophersaunders.com
+author: Topher
 excerpt: "In this tutorial, I'll show you a template for making 2D quicktime movies
   with 
 [Processing.\r\n\r\n[caption

@@ -4,13 +4,9 @@ status: publish
 published: true
 title: Implementing quicksort Part 2
 author: Topher
-author_login: admin
-author_url: http://www.tophersaunders.com
-wordpress_id: 1590
 date: '2013-11-24 15:24:00 -0800'
 categories:
 - Code
-tags: []
 ---
 
 [Part 1](sort-strings-alphabetically-in-c-part-1)
