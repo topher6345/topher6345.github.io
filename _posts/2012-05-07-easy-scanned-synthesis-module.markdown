@@ -3,29 +3,16 @@ layout: post
 status: publish
 published: true
 title: Easy Scanned Synthesis Module
-author:
-  display_name: Topher
-  login: admin
-  email: csaunders@berklee.net
-  url: http://www.tophersaunders.com
-author_login: admin
-author_email: csaunders@berklee.net
-author_url: http://www.tophersaunders.com
-excerpt: "In this article I'll demonstrate how to use an easy scanned synthesis module
-  that's as easy to use as the oscil opcode.\r\n\r\nFirst lets review oscil, an elegantly
-  simple opcode. It takes just 3 input arguments.\r\n\r\nares oscil xamp, xcps, ifn\r\n\r\nas
-  far as Csound opcodes go this is one the most basic. Amplitude, pitch, and waveform
-  (f-table) the only three things you need to make it work.\r\n\r\n"
-wordpress_id: 861
-wordpress_url: http://www.tophersaunders.com/wp/?p=861
+author: Topher
 date: '2012-05-07 22:05:22 -0700'
-date_gmt: '2012-05-08 02:05:22 -0700'
 categories:
 - Audio
 - Code
 tags:
 - Csound
----In this article I'll demonstrate how to use an easy scanned synthesis module that's as easy to use as the oscil opcode.
+---
+
+In this article I'll demonstrate how to use an easy scanned synthesis module that's as easy to use as the oscil opcode.
 
 First lets review oscil, an elegantly simple opcode. It takes just 3 input arguments.
 

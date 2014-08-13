@@ -5,7 +5,6 @@ published: true
 title: '"ColorBounce" - Interactive Pattern Sequencer in MaxMSP'
 author: Topher
 date: '2011-08-09 22:47:11 -0700'
-date_gmt: '2011-08-10 02:47:11 -0700'
 categories:
 - Audio
 - Code

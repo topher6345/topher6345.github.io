@@ -3,24 +3,8 @@ layout: post
 status: publish
 published: true
 title: Binaural Spatialization of the Lorenz Attractor
-author:
-  display_name: Topher
-  login: admin
-  email: csaunders@berklee.net
-  url: http://www.tophersaunders.com
-author_login: admin
-author_email: csaunders@berklee.net
-author_url: http://www.tophersaunders.com
-excerpt: "Put on your headphones to experience binaural spatialization of the lorenz
-  attractor, using a drum loop as the sound source.\r\n\r\n
-\r\nYour browser does not support the audio tag.\r\n\r\n\r\n[caption
-  id=\"attachment_957\" align=\"aligncenter\" width=\"350\" caption=\"The Lorenz Attractor
-  in 3D\"]
-[![\"lorenz](\"http://www.tophersaunders.com/wp/wp-content/uploads/2012/05/lorenz.png\")[/caption]\r\n\r\n"
-wordpress_id: 945
-wordpress_url: http://www.tophersaunders.com/wp/?p=945
+author: Topher
 date: '2012-05-26 20:29:49 -0700'
-date_gmt: '2012-05-27 00:29:49 -0700'
 categories:
 - Audio
 - Code

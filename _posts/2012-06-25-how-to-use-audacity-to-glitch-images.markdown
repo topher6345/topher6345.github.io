@@ -4,17 +4,7 @@ status: publish
 published: true
 title: How to use Audacity to Glitch Images
 author: Topher
-author_login: admin
-author_email: csaunders@berklee.net
-author_url: http://www.tophersaunders.com
-excerpt: "[caption id=\"attachment_1007\" align=\"aligncenter\" width=\"300\"]
-[![\"\"](\"http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/kramerDual-300x196.png\") Before and After Processing with Audacity[/caption]\r\n\r\nIn
-  this article I'll show you how to use a free, open source audio editor - Audacity
-  to glitch images.\r\n\r\n"
-wordpress_id: 1006
-wordpress_url: http://www.tophersaunders.com/wp/?p=1006
 date: '2012-06-25 21:17:18 -0700'
-date_gmt: '2012-06-26 01:17:18 -0700'
 categories:
 - Audio
 - Graphics

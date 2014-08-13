@@ -4,13 +4,7 @@ status: publish
 published: true
 title: '"Picture Composer" - Graphics-Based RGB Chord Generator in MaxMSP'
 author: Topher
-author_login: admin
-author_email: csaunders@berklee.net
-author_url: http://www.tophersaunders.com
-wordpress_id: 1047
-wordpress_url: http://www.tophersaunders.com/wp/?p=1047
 date: '2012-07-02 20:57:34 -0700'
-date_gmt: '2012-07-03 00:57:34 -0700'
 categories:
 - Audio
 - Code

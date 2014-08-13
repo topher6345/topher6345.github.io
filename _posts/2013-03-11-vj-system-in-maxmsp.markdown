@@ -4,26 +4,16 @@ status: publish
 published: true
 title: MIDI VJ system in MaxMSP
 author: Topher
-author_login: admin
-author_email: csaunders@berklee.net
-author_url: http://www.tophersaunders.com
-excerpt: "In this post I'll walk you through my VJ system in MaxMSP I built to do
-  live performances.\r\n\r\n"
-wordpress_id: 1207
-wordpress_url: http://www.tophersaunders.com/wp/?p=1207
 date: '2013-03-11 13:29:54 -0700'
-date_gmt: '2013-03-11 17:29:54 -0700'
 categories:
 - Video
 - Code
 tags:
 - MaxMSP
 - Jitter
----In this post I'll walk you through my VJ system in MaxMSP I built to do live performances.
+---
+In this post I'll walk you through my VJ system in MaxMSP I built to do live performances.
 
-[]()[]()
-
-[caption id="attachment_1213" align="aligncenter" width="300"]
 [![vj system in maxmsp](http://www.tophersaunders.com/wp/wp-content/uploads/2013/03/xcal1-300x177.png) Click to view full size.[/caption]](http://www.tophersaunders.com/wp/wp-content/uploads/2013/03/xcal1.png)
 
 Step 1: download and install this -

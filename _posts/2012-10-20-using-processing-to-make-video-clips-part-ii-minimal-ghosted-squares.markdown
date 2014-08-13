@@ -4,19 +4,7 @@ status: publish
 published: true
 title: Exporting Quicktime Movies with Processing - Part II
 author: Topher
-author_login: admin
-author_email: csaunders@berklee.net
-author_url: http://www.tophersaunders.com
-excerpt: "[caption id=\"attachment_1123\" align=\"aligncenter\" width=\"320\"]
-[![\"\"](\"http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-9.11.09-PM.png\") A video clip made with Processing
-  using the Quicktime template[/caption]\r\n\r\nIn my last post, I showed you
-  how to setup a template in Processing for making quicktime movies.\r\n\r\nIn this
-  tutorial, I'll show you how to make a movie with the template - 4 squares that grow
-  in size, overlap in a cool way, and with ghosting.\r\n\r\n"
-wordpress_id: 1121
-wordpress_url: http://www.tophersaunders.com/wp/?p=1121
 date: '2012-10-20 22:15:36 -0700'
-date_gmt: '2012-10-21 02:15:36 -0700'
 categories:
 - Video
 - Code
@@ -25,14 +13,15 @@ tags:
 - Processing
 ---
 
-[caption id="attachment_1123" align="aligncenter" width="320"]
-[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-9.11.09-PM.png) A video clip made with Processing using the Quicktime template[/caption]](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-9.11.09-PM.png)
+
+[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-9.11.09-PM.png) ](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-9.11.09-PM.png)
+
+A video clip made with Processing using the Quicktime template
 
 In my last post, I showed you how to setup a template in Processing for making quicktime movies.
 
 In this tutorial, I'll show you how to make a movie with the template - 4 squares that grow in size, overlap in a cool way, and with ghosting.
 
-[]()[]()
 
 squares.pde
 

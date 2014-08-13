@@ -5,10 +5,7 @@ published: true
 title: Reworking Digital Synthesizer Source Code into a 3D Processing sketch Part
   1 of 3
 author: Topher
-wordpress_id: 1152
-wordpress_url: http://www.tophersaunders.com/wp/?p=1152
 date: '2012-10-21 01:50:47 -0700'
-date_gmt: '2012-10-21 05:50:47 -0700'
 categories:
 - Code
 - Graphics

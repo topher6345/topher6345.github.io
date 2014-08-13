@@ -4,24 +4,7 @@ status: publish
 published: true
 title: Implementing quicksort Part 1
 author: Topher
-excerpt: "Let's examine a classic computer science question - 
-how to alphabetically
-  sort words.\r\n\r\nIn the first part, we'll examine the problem and set
-  up a test-driven-development template. \r\n\r\nIn part 2 we'll examine the quicksort
-  algorithm, and implement it to get our test to pass. \r\n\r\nHeres our list of words
-  (or 'strings' in C speak). They're the names of some of my friend's cats. \r\n\r\nWe'll
-  be using this list throughout the tutorial.\r\n
-\r\n  
-*Bryaxis\r\n
-  \
-*Batman\r\n
-*Sadie\r\n
-*Milo\r\n
-*Lou\r\n\r\n\r\n"
-wordpress_id: 1587
-wordpress_url: http://www.tophersaunders.com/wp/?p=1587
 date: '2013-11-24 15:23:10 -0800'
-date_gmt: '2013-11-24 20:23:10 -0800'
 categories:
 - Code
 tags: []

@@ -4,17 +4,7 @@ status: publish
 published: true
 title: Exporting Quicktime Movies with Processing - Part I
 author: Topher
-excerpt: "In this tutorial, I'll show you a template for making 2D quicktime movies
-  with 
-[Processing.\r\n\r\n[caption
-  id=\"attachment_1083\" align=\"aligncenter\" width=\"323\"]](\"http://processing.org/\")[![\"\"](\"http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-7.49.48-PM.png\") A video made with Processing.[/caption]\r\n\r\nProcessing
-  is a very user friendly language. One of its strengths is how easily you can do
-  procedural drawing. However, its surprisingly tricky to export sketches as quicktime
-  movies, and its not very well documented (until now!)\r\n\r\n"
-wordpress_id: 1081
-wordpress_url: http://www.tophersaunders.com/wp/?p=1081
 date: '2012-10-20 21:09:06 -0700'
-date_gmt: '2012-10-21 01:09:06 -0700'
 categories:
 - Video
 - Code

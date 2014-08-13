@@ -5,7 +5,6 @@ published: true
 title: MIDI Scanned Synthesis in Csound
 author: Topher
 date: '2012-04-18 22:14:25 -0700'
-date_gmt: '2012-04-19 02:14:25 -0700'
 categories:
 - Audio
 - Code
