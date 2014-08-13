@@ -17,7 +17,7 @@ In this tutorial, I'll show you a template for making 2D quicktime movies with
 [Processing.](http://processing.org/)
 
 [caption id="attachment_1083" align="aligncenter" width="323"]
-[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-7.49.48-PM.png) A video made with Processing.[/caption]](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-7.49.48-PM.png)
+[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-7.49.48-PM.png) A video made with Processing.](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-7.49.48-PM.png)
 
 Processing is a very user friendly language. One of its strengths is how easily you can do procedural drawing. However, its surprisingly tricky to export sketches as quicktime movies, and its not very well documented (until now!)
 

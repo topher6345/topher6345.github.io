@@ -17,7 +17,7 @@ Put on your headphones to experience binaural spatialization of the lorenz attra
 Your browser does not support the audio tag.
 
 [caption id="attachment_957" align="aligncenter" width="350" caption="The Lorenz Attractor in 3D"]
-[![lorenz attractor](http://www.tophersaunders.com/wp/wp-content/uploads/2012/05/lorenz.png)[/caption]](http://upload.wikimedia.org/wikipedia/commons/5/5b/Lorenz_attractor_yb.svg)
+[![lorenz attractor](http://www.tophersaunders.com/wp/wp-content/uploads/2012/05/lorenz.png)](http://upload.wikimedia.org/wikipedia/commons/5/5b/Lorenz_attractor_yb.svg)
 
 []()[]()
 

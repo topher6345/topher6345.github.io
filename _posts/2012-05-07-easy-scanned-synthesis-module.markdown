@@ -292,7 +292,7 @@ Using macro's this way,I've ensured variables, f-table numbers, and scan id numb
 Also there is a macro for Size, which gives the user to make presets that use different sizes than 128. Remember that this number must be a power of two or csound will give an error. Equally as crucial, the file circularstring-N must be in the same directory.
 
 [caption id="attachment_877" align="aligncenter" width="333" caption="How the directory should stay organized."]
-![scanned synthesis](http://www.tophersaunders.com/wp/wp-content/uploads/2012/05/Screen-shot-2012-05-07-at-9.54.07-PM.png)[/caption]
+![scanned synthesis](http://www.tophersaunders.com/wp/wp-content/uploads/2012/05/Screen-shot-2012-05-07-at-9.54.07-PM.png)
 
 I've included common power of two sizes in case you want to make templates to experiment, or you can keep this number after you copy paste it.
 

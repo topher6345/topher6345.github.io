@@ -17,6 +17,6 @@ A bouncy MIDI controller with Scriabin-inspired lights.
 *Aug 11* - Now with 
 **30 more modes & scales!**
 
-[![](http://www.tophersaunders.com/img/colorbounce.png)[/caption]](http://www.tophersaunders.com/max/ColorBounceBeta.zip)
+[![](http://www.tophersaunders.com/img/colorbounce.png)](http://www.tophersaunders.com/max/ColorBounceBeta.zip)
 
 [Download the MaxPatch](http://www.tophersaunders.com/max/ColorBounceMax.zip)

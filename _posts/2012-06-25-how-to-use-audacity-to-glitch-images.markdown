@@ -14,12 +14,12 @@ tags:
 ---
 
 [caption id="attachment_1007" align="aligncenter" width="300"]
-[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/kramerDual-300x196.png) Before and After Processing with Audacity[/caption]](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/kramerDual.png)
+[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/kramerDual-300x196.png) Before and After Processing with Audacity](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/kramerDual.png)
 
 In this article I'll show you how to use a free, open source audio editor - Audacity to glitch images.
 
 [caption id="attachment_1010" align="aligncenter" width="300"]
-[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/topherface7-300x225.png) A picture of my face processed by audacity[/caption]](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/topherface7.png)
+[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/topherface7-300x225.png) A picture of my face processed by audacity](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/topherface7.png)
 
 **Step 1: download the right version of Audacity.**
 
@@ -35,7 +35,7 @@ can use the latest version of Audacity (ver. 2.3.0)
 Open Audacity's preferences by finding it the menu bar, or by using the Command-, (Command and the comma key) shortcut.
 
 [caption id="attachment_1016" align="aligncenter" width="300"]
-[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/Screen-Shot-2012-06-25-at-8.32.22-PM-300x247.png) Click to enlarge[/caption]](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/Screen-Shot-2012-06-25-at-8.32.22-PM.png)
+[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/Screen-Shot-2012-06-25-at-8.32.22-PM-300x247.png) Click to enlarge](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/Screen-Shot-2012-06-25-at-8.32.22-PM.png)
 
 Make your preferences look like the screenshot above. You will have to navigate to the "File Formats" tab, choose "other" from the "Uncompressed Export Format" menu. When you click "other" a pop up menu will appear.
 
@@ -57,7 +57,7 @@ jpeg or
 When you choose your .bmp file, then this menu appears asking how you would like to import it. Choose the options so that it's like the screenshot
 
 [caption id="attachment_1030" align="aligncenter" width="300"]
-[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/Screen-Shot-2012-06-25-at-8.52.00-PM-300x204.png) Click to Enlarge[/caption]](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/Screen-Shot-2012-06-25-at-8.52.00-PM.png)
+[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/Screen-Shot-2012-06-25-at-8.52.00-PM-300x204.png) Click to Enlarge](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/Screen-Shot-2012-06-25-at-8.52.00-PM.png)
 
 Choose 
 A-Law as the sample format; 
@@ -65,7 +65,7 @@ Big-endian as the sample order; and
 1 Channel Mono. And then click import.
 
 [caption id="attachment_1032" align="aligncenter" width="300"]
-[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/Screen-Shot-2012-06-25-at-8.56.11-PM-300x27.png) You should end up with something that looks like this.[/caption]](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/Screen-Shot-2012-06-25-at-8.56.11-PM.png)
+[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/Screen-Shot-2012-06-25-at-8.56.11-PM-300x27.png) You should end up with something that looks like this.](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/Screen-Shot-2012-06-25-at-8.56.11-PM.png)
 
 You don't have to listen to the audio. Its usually unpleasant. But go ahead, you know you're curious.
 
@@ -79,7 +79,7 @@ The first quarter of a second is usually the .bmp header,
 don't apply effects to the header. If you mess up the header you'll end up with a file your operating system won't know what to do with, therefore it won't open in any application and be just some mysterious collection of junk data.**
 
 [caption id="attachment_1036" align="aligncenter" width="300"]
-![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/Screen-Shot-2012-06-25-at-9.04.10-PM-300x33.png) Don't screw up the header!![/caption]
+![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/Screen-Shot-2012-06-25-at-9.04.10-PM-300x33.png) Don't screw up the header!!
 
 I repeat: Don't apply effects to the header.
 
@@ -92,7 +92,7 @@ The file will export as a .raw file. This file can be opened by Preview and othe
 You can experiment with all kinds of audio effects on your image files. I find the echo effect to be the most effective. It tends to smear multicolored copies of the image all over the place.
 
 [caption id="attachment_1038" align="aligncenter" width="228"]
-[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/kramer2-228x300.png) More Pronounced Echo[/caption]](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/kramer2.png)
+[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/kramer2-228x300.png) More Pronounced Echo](http://www.tophersaunders.com/wp/wp-content/uploads/2012/06/kramer2.png)
 
 High Pass filter takes out alot of the darker colors
 

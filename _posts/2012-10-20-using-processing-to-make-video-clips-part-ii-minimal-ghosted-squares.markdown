@@ -723,18 +723,18 @@ here the x origin is a quarter of the width, or halfway to the horizontal center
 and so on for the placement of other rectangles...
 
 [caption id="attachment_1136" align="aligncenter" width="320"]
-[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.04.46-PM.png) The first couple frames of our video look like this.[/caption]](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.04.46-PM.png)
+[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.04.46-PM.png) The first couple frames of our video look like this.](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.04.46-PM.png)
 
 To give these rectangles motion, we declare a global variable in the header, and then increment the value every frame, So in the first frame i=0, the second i=1, the third frame i=3 and so on. The effect is that the squares are a little bigger each frame.
 
 [caption id="attachment_1137" align="aligncenter" width="322"]
-[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.06.50-PM.png) As the variable i is incremented each frame, the squares grow[/caption]](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.06.50-PM.png)
+[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.06.50-PM.png) As the variable i is incremented each frame, the squares grow](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.06.50-PM.png)
 
 [caption id="attachment_1138" align="aligncenter" width="322"]
-[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.07.59-PM.png) Because we specified noFill() on line 41, the lines of the squares overlap.[/caption]](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.07.59-PM.png)
+[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.07.59-PM.png) Because we specified noFill() on line 41, the lines of the squares overlap.](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.07.59-PM.png)
 
 [caption id="attachment_1140" align="aligncenter" width="319"]
-[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.09.34-PM.png) They continue to overlap in cool ways until...[/caption]](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.09.34-PM.png)
+[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.09.34-PM.png) They continue to overlap in cool ways until...](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.09.34-PM.png)
 
 [caption id="attachment_1141" align="aligncenter" width="321"]
-[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.11.25-PM.png) ...they become too large for the screen. Now we can hit spacebar, which calls mm.finish() and our Quicktime .mov is ready![/caption]](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.11.25-PM.png)](\"http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-9.11.09-PM.png\")
+[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.11.25-PM.png) ...they become too large for the screen. Now we can hit spacebar, which calls mm.finish() and our Quicktime .mov is ready!](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-10.11.25-PM.png)](\"http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-9.11.09-PM.png\")
