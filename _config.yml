@@ -6,7 +6,9 @@ baseurl: ""
 url: "http://tophersaunders.com"
 username: topher6345
 twitter: snophort
+future: false
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+input: GFM
 permalink: :title
