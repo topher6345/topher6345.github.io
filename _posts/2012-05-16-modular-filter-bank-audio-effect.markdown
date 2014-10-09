@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-published: true
+published: false
 title: Modular Filter Bank Audio Effect
 author: Topher
 date: '2012-05-16 23:25:59 -0700'

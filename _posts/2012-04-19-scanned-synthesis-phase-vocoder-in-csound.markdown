@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-published: true
+published: false
 title: Scanned Synthesis Phase Vocoder Audio Effect Demo
 author: Topher
 date: '2012-04-19 02:21:31 -0700'
@@ -15,11 +15,7 @@ tags:
 
 [scan_pvoc.mp3](http://www.tophersaunders.com/mp3s/scan_pvoc.mp3)
 
- 
-
 Here's a more transparent example of what the audio effect does to an audio sample.
-
-[]()[]()
 
 Lets start with a short bar of one of my favorite composers, Maurice Ravel.
 
@@ -34,10 +30,8 @@ Here's how it sounds once it's put through Scan4LivePVOC.
 
 [assez_pvoc1.mp3](http://www.tophersaunders.com/mp3s/assez_pvoc1.mp3)
 
-
-
 smeared and time-altered, like we can't remember which part you heard and which part you're about to hear.
 
 And another example:
 
-[assez_pvoc2.mp3](http://www.tophersaunders.com/mp3s/assez_pvoc2.mp3)](\"http://www.tophersaunders.com/mp3s/scan_pvoc.mp3\")
+[assez_pvoc2.mp3](http://www.tophersaunders.com/mp3s/assez_pvoc2.mp3)

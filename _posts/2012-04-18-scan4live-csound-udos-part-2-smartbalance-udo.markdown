@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-published: true
+published: false
 title: Scanned Synthesis Modules Part 2 - Amplitude Control
 author: Topher
 date: '2012-04-18 15:48:44 -0700'

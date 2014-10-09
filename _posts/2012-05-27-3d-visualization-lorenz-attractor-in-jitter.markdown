@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-published: true
+published: false
 title: 3D Visualization of Lorenz Attractor In Jitter
 author: Topher
 author_login: admin

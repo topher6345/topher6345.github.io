@@ -34,33 +34,33 @@ We'll be using this list throughout the tutorial.
 In Ruby, my weapon of choice for dealing with strings, it goes like this.
 
 Open irb in your terminal window and type
-{% highlight ruby %}
+```
 @names = ['Bryaxis', 'Batman', 'Sadie', 'Milo', 'Lou']
 @names.sort
-{% endhighlight %}
+```
 
 To skip the interpretor look for file
 
 ### part-1/01-alphabetical-sort-ruby.rb
 
-{% highlight bash %}
+```bash
 ruby 01-alphabetical-sort-ruby.rb
-{% endhighlight %}
+```
 
 Python is also good with strings 
 
 Open the python interpreter and type 
-{% highlight python %}
+```python
 names = ['Bryaxis', 'Batman', 'Sadie', 'Milo', 'Lou']
 sorted(names)
-{% endhighlight %}
+```
 To skip the the interpretor 
 
 ### part-1/03-alphabetical-sort-python.py
 
-{% highlight bash %}
+```bash
 python 03-alphabetical-sort-python.py
-{% endhighlight %}
+```
 In these languages, string sorting has already be implemented,
 but we want to examine *how* an algorithm like this is structured and implemented. 
 So, let's get low-level and work it out in C.
@@ -75,25 +75,25 @@ We'll start with a simple C file
 
 ### part-1/05-simple-assert.c
 
-{% highlight c++ %}
-#include <stdio.h>
+```c++ 
+#include <stdio
 #include <assert.h>
 
 int main() {
     assert(0);
     return 0;
 }
-{% endhighlight %}
+```
 To Compile & run
-{% highlight bash %}
+```bash
 gcc 05-simple-assert.c && ./a.out
-{% endhighlight %}
+```
 
 you should see:
-{% highlight bash %}
+```bash
 Assertion failed: (0), function main, file main.c, line 5.
 Abort trap
-{% endhighlight %}
+```
 
 If you are unfamiliar with TDD, you might be wondering what assert() is all about. 
 
@@ -102,8 +102,8 @@ We can make sure it passes on true by inserting a positive assert.
 This way, our code compiles without errors, but stops on execution if our algorithm isn't doing what we want it to.
 
 ### part-1/06-simple-meta-assert.c
-{% highlight c++ %}
-#include <stdio.h>
+```c++
+#include <stdio
 #include <assert.h>
 
 int main() {
@@ -111,26 +111,26 @@ int main() {
     assert(0);
     return 0;
 }
-{% endhighlight %}
+```
 To compile and run 
 
-{% highlight bash %}
+```bash
 gcc 06-simple-meta-assert.c && ./a.out
-{% endhighlight %}
+```
 
 you should see:
-{% highlight bash %}
+```bash
 Assertion failed: (0), function main, file main.c, line 6.
 Abort trap
-{% endhighlight %}
+```
 
 Notice that it failed on line 6, but not on line 5. this should make you comfortable enough with the assert() function to continue on. 
 
 Since we will be dealing with words, lets add the string.h header, and some string comparison assertions to our code.
 
 ### part-1/07-simple-assert-two-strings.c
-{% highlight c++ %}
-#include <stdio.h>
+```c++
+#include <stdio
 #include <assert.h>
 #include <string.h>
 int main() {
@@ -140,16 +140,16 @@ int main() {
   assert(!strcmp(unsortedWords,alphabetizedWords));
   return 0;
 }
-{% endhighlight %}
+```
 To compile and run
-{% highlight bash %}
+```bash
 gcc 07-simple-assert-two-strings.c && ./a.out
-{% endhighlight %}
+```
 you should see 
-{% highlight bash %}
+```bash
 Assertion failed: (!strcmp(unsortedWords,sortedWords)), function main, file main.c, line 8.
 Abort trap
-{% endhighlight %}
+```
 
 We are using the strcmp() function to compare two strings, notice the ! before strcmp(), because strcmp() is weird and returns 0 if the strings don't match and 1 if they do. (welcome to C, where up is down and down is up, I miss ruby already)
 
@@ -158,8 +158,8 @@ This gets us closer to being able to test if we correctly implemented a way to a
 We'll need a way to iterate through an array of strings and compare each individual string in the array.
 
 ### part-1/08-compare-first-element-of-string-array.c
-{% highlight c++ %}
-#include <stdio.h>
+```c++
+#include <stdio
 #include <assert.h>
 #include <string.h>
 int main() {
@@ -169,19 +169,19 @@ int main() {
   assert(!strcmp(unsortedWords[0],alphabetizedWords[0]));
   return 0;
 }
-{% endhighlight %}
+```
 
 To compile and run
-{% highlight bash %}
+```bash
 gcc 08-compare-first-element-of-string-array.c && ./a.out
-{% endhighlight %}
+```
 
 If we compile and run this, then we should get this message
-{% highlight bash %}
+```bash
 Assertion failed: (!strcmp(unsortedWords[0],alphabetizedWords[0])), 
 function main, file main.c, line 8.
 Abort trap
-{% endhighlight %}
+```
 
 Which tells us that the first word (aka string) in the array is not the same. 
 
@@ -190,8 +190,8 @@ So lets modify our code furthur to check every single word in the array.
 We'll have to quit using assert() because a failed assert stops execution of the program.
 
 ### 09-compare-array-of-strings.c
-{% highlight c++ %}
-#include <stdio.h>
+```c++
+#include <stdio
 #include <assert.h>
 #include <string.h>
 int main() {
@@ -226,17 +226,17 @@ int main() {
   }
   return 0;
 }
-{% endhighlight %}
+```
 
 To compile and run
 
-{% highlight bash %}
+```bash
 gcc 09-compare-array-of-strings.c && ./a.out
-{% endhighlight %}
+```
 
 And you should see:
 
-{% highlight bash %}
+```bash
 MetaTest:
 Success! unsortedWords[0] 'Bryaxis' matches unsortedWords[0] 'Bryaxis'.
 Success! unsortedWords[1] 'Batman' matches unsortedWords[1] 'Batman'.
@@ -249,15 +249,15 @@ Failure! unsortedWords[1] 'Batman' doesn't match alphabetizedWords[1] 'Bryaxis'.
 Failure! unsortedWords[2] 'Sadie' doesn't match alphabetizedWords[2] 'Lou'.
 Success! unsortedWords[3] 'Milo' matches unsortedWords[3] 'Milo'.
 Failure! unsortedWords[4] 'Lou' doesn't match alphabetizedWords[4] 'Sadie'.
-{% endhighlight %}
+```
  
 We have a automatic way to test if two arrays of words are the same. But its a little hard to infer that so, at the risk of going on a tangent here, I'm going to add some terminal colors to this output. 
 Here I should mention I'm on OSX 10.6 so this color codes might not work for you. Along the way I'll enforce some better coding style-like not having lines longer than 79 columns.
 
 ### 10-compare-array-of-strings-colors.c
 
-{% highlight c++ %}
-#include <stdio.h>
+``` c++
+#include <stdio
 #include <assert.h>
 #include <string.h>
 #define RESET   "\033[0m"
@@ -311,12 +311,12 @@ int main() {
   }
   return 0;
 }
-{% endhighlight %}
+```
 
 Our code is getting a little crowded, so let's put our test into a function. And comment out our metatest
 
-{% highlight c++ %}
-#include <stdio.h>
+```c++
+#include <stdio
 #include <assert.h>
 #include <string.h>
 #define RESET   "\033[0m"
@@ -385,19 +385,21 @@ void doesAlphabetizeWork(char** unsortedWords,
     }
   }
 }
-{% endhighlight %}
+```
 
 To compile and run
 
-{% highlight bash %}
+```bash
 gcc 11-does-alphabetize-work-function.c && ./a.out
-{% endhighlight %}
+```
 
 Now when we compile and run this code we should see (with colors of course)
-{% highlight bash %}
+
+```bash
+
 Failure! unsortedWords[0] "Bryaxis'doesn't matchalphabetizedWords[0] 'Batman'".
 Failure! unsortedWords[1] "Batman'doesn't matchalphabetizedWords[1] 'Bryaxis'".
 Failure! unsortedWords[2] "Sadie'doesn't matchalphabetizedWords[2] 'Lou'".
 Success! unsortedWords[3] "Milo'matchesalphabetizedWords[3] 'Milo'".
 Failure! unsortedWords[4] "Lou'doesn't matchalphabetizedWords[4] 'Sadie'".
-{% endhighlight %}
+```

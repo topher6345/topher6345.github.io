@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-published: true
+published: false
 title: Binaural Spatialization of the Lorenz Attractor
 author: Topher
 date: '2012-05-26 20:29:49 -0700'

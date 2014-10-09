@@ -33,8 +33,7 @@ We will implement quick sort first, then apply it to our array of strings from P
 
 ### part-2/1-quicksort-ints.c
 
-{% highlight c++ %}
-
+```c++
 #include <stdio.h>
 #define RESET   "\033[0m"
 #define BLACK   "\033[30m"      /* Black */
@@ -124,41 +123,40 @@ int partition( int currentPartition[], int firstPosition, int lastPosition) {
    // return new pivot
    return j;
 }
-{% endhighlight %}
-
+```
 
 To Compile and run
-{% highlight bash %}
+```
 gcc 1-quicksort-ints.c && ./a.out
-{% endhighlight %}
+```
 
 If you compile and run this code you should see
 
-{% highlight bash %}
+```
 Test Passed! Quicksort Works.
-{% endhighlight %}
+```
 
 Lets start to pick apart this code.
 
 In our main() function we first declare two arrays of integers.
 
-{% highlight c++ %}
+```
 int unsorted[] = { 7, 12, 1, -2, 0, 15, 4, 11, 9};
 int sorted[] = {-2, 0, 1, 4, 7, 9, 11, 12, 15};
-{% endhighlight %}
+```
 
 Below it, we call our quickSort() function to sort the arrays. With 3 arguments -
 1. the array of integers to be sorted
 2. A lower bound for the array (0 in this case)
 3. The number of elements in the array (8).
 
-{% highlight c++ %}
+```
 quickSort( unsorted, 0, 8);
-{% endhighlight %}
+```
 
 Below this in main, I've written a test to see if my hand sorted array *sorted* matches the output of quicksort.
 
-{% highlight c++ %}
+```
   // TEST
   for(i = 0; i < 9; ++i){
     if (unsorted[i] != sorted[i]){
@@ -173,11 +171,11 @@ Below this in main, I've written a test to see if my hand sorted array *sorted* 
   printf("\nTest Passed! Quicksort Works.\n\n");
   printf(RESET);
   return 0;
-{% endhighlight %}
+```
 
 Our second function in this example is quickSort()
 
-{% highlight c++ %}
+```
 void quickSort( int unsorted[], int l, int r)
 {
    int pivot;
@@ -191,7 +189,7 @@ void quickSort( int unsorted[], int l, int r)
    }
 
 }
-{% endhighlight %}
+```
 
 Once again, we see the three arguments declared.
 
@@ -201,16 +199,16 @@ Searching the list of elements and selecting a pivot is its own algorithm. We've
 
 Once the list is split, quickSort() is called on the upper list and the lower lists.
 
-{% highlight c++ %}
+```
        quickSort( unsorted, l, pivot-1);
        quickSort( unsorted, pivot+1, r);
-{% endhighlight %}
+```
 
 Since the algorithm is the same for the sublists as it is for the whole list, its a perfect opportunity to use recursion. The function calls itself.
 
 Lets move on to the function partition();
 
-{% highlight c++ %}
+```
 int partition( int currentPartition[], int firstPosition, int lastPosition) {
    int pivot, i, j, tmp;
 
@@ -249,7 +247,7 @@ int partition( int currentPartition[], int firstPosition, int lastPosition) {
    // return new pivot
    return j;
 }
-{% endhighlight %}
+```
 
 I've done my best to comment and self-document this as clearly as possible.
 
@@ -257,7 +255,7 @@ This function of course returns an index, but partition() also has the other job
 
 A number of other implementations of quick sort move the elements into another memory location, but for our purposes we will swap them in place. This has to do with being efficient with memory and not allocating more than you need.
 
-{% highlight c++ %}
+```
     // swap currentPartition[i] and currentPartition[j]
     tmp = currentPartition[i];
     currentPartition[i] = currentPartition[j];
@@ -268,7 +266,7 @@ A number of other implementations of quick sort move the elements into another m
    tmp = currentPartition[firstPosition];
    currentPartition[firstPosition] = currentPartition[j];
    currentPartition[j] = tmp;
-{% endhighlight %}
+```
 
 This is the clearest and most basic example of Quick Sort'ing integers I could muster. We'll modify this code to sort characters and finally strings in the next examples.
 
@@ -276,7 +274,7 @@ Our next example sorts characters in a similar way
 
 ### part-2/2-quicksort-chars.c
 
-{% highlight c++ %}
+```
 #include <stdio.h>
 #define RESET   "\033[0m"
 #define BLACK   "\033[30m"      /* Black */
@@ -364,11 +362,11 @@ int partition( char currentPartition[], int firstPosition, int lastPosition) {
    // return new pivot
    return j;
 }
-{% endhighlight %}
-{% highlight bash %}
+```
+```
 gcc part-2/2-quicksort-chars.c && ./a.out
 
-{% endhighlight %}
+```
 
 If you compile and run this code you should see the same output as before.
 
@@ -379,13 +377,13 @@ When I messed up the functionality the test failed, and when I safely refactored
 Lets check out what is different about this example.
 
 Our function declarations are different, now partition() and quickSort() take char arrays as the first argument
-{% highlight c++ %}
+```
 void quickSort( char[], int, int);
 int partition( char[], int, int);
-{% endhighlight %}
+```
 
 Also remembering to make this change in the function definitions.
-{% highlight c++ %}
+```
 void quickSort( char unsorted[], int l, int r)
 {
    int pivot;
@@ -399,10 +397,10 @@ void quickSort( char unsorted[], int l, int r)
    }
 
 }
-{% endhighlight %}
+```
 
 Because now we are reordering and swapping chars, the corresponding variables used to swap these elements of the list have to declared as chars.
-{% highlight c++ %}
+```
 int partition( char currentPartition[], int firstPosition, int lastPosition) {
    int  i, j;
    char pivotElement, tmp;
@@ -442,13 +440,13 @@ int partition( char currentPartition[], int firstPosition, int lastPosition) {
    // return new pivot
    return j;
 }
-{% endhighlight %}
+```
 
 And of course, now our arrays to be sorted are fully of chars not ints.
-{% highlight c++ %}
+```
 char unsorted[] = { 'g', 'l', 'b', 'c', 'a', 'm', 'e', 'k', 'i'};
 char sorted[] = { 'a', 'b','c', 'e', 'g', 'i', 'k', 'l', 'm'};
-{% endhighlight %}
+```
 
 Since we now have some working code that alphabetizes chars, we can apply that to our strings, which are arrays of chars, by sorting by the first element of the array.
 
@@ -457,7 +455,7 @@ Since we now have some working code that alphabetizes chars, we can apply that t
 
 ### 3-quicksort-strings-fails/main.c
 
-{% highlight c++ %}
+```
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -550,10 +548,10 @@ int partition( char** currentPartition, int firstPosition, int lastPosition) {
    // return new pivot
    return j;
 }
-{% endhighlight %}
+```
 ### part-2/3-quicksort-strings-fails/doesAlphabetizeWork.c
 
-{% highlight c++ %}
+```
 #define RESET   "\033[0m"
 #define BLACK   "\033[30m"      /* Black */
 #define RED     "\033[31m"      /* Red */
@@ -598,20 +596,20 @@ void doesAlphabetizeWork(char** unsortedWords,
         }
     }
 }
-{% endhighlight %}
+```
 
-{% highlight bash %}
+```
 gcc 3-quicksort-strings-fails/main.c && 3-quicksort-strings-fails/./a.out
-{% endhighlight %}
+```
 
 If you compile and run this code you should see this
-{% highlight bash %}
+```
 Failure! unsortedWords[0] '����'doesn't matchalphabetizedWords[0] 'Batman'.
 Failure! unsortedWords[1] 'Batman'doesn't matchalphabetizedWords[1] 'Bryaxis'.
 Failure! unsortedWords[2] 'Bryaxis'doesn't matchalphabetizedWords[2] 'Lou'.
 Failure! unsortedWords[3] 'Lou'doesn't matchalphabetizedWords[3] 'Milo'.
 Failure! unsortedWords[4] 'Milo'doesn't matchalphabetizedWords[4] 'Sadie'.
-{% endhighlight %}
+```
 
 Don't worry, code that passes our test is given below!
 Our code fails because there is some problems with the implementation of our algorithm. char and int types can be compared with the == operator, but we really should be using strcmp() when dealing with char arrays.
@@ -622,7 +620,7 @@ Finally our working code, that passes the test we wrote in Part 1
 
 
 ### part-2/4-quicksort-for-strings-pass/main.c
-{% highlight c++ %}
+```
 #include <stdio.h>
 #include <string.h>
 #include "doesAlphabetizeWork.c"
@@ -690,12 +688,12 @@ void quickSort(char items[][10], int left, int right)
      quickSort(items, i, right);
   }
 }
-{% endhighlight %}
+```
 
 We also had to modify our test function
 
 ### part-2/4-quicksort-for-strings-pass/doesAlphabetizeWork.c
-{% highlight c++ %}
+```
 #define RESET   "\033[0m"
 #define BLACK   "\033[30m"      /* Black */
 #define RED     "\033[31m"      /* Red */
@@ -740,23 +738,23 @@ void doesAlphabetizeWork(char unsortedWords[][10],
         }
     }
 }
-{% endhighlight %}
+```
 if you compile and run this code you should see
 
-{% highlight bash %}
+```
 Success! unsortedWords[0] 'Batman'matchesalphabetizedWords[0] 'Batman'.
 Success! unsortedWords[1] 'Bryaxis'matchesalphabetizedWords[1] 'Bryaxis'.
 Success! unsortedWords[2] 'Lou'matchesalphabetizedWords[2] 'Lou'.
 Success! unsortedWords[3] 'Milo'matchesalphabetizedWords[3] 'Milo'.
 Success! unsortedWords[4] 'Sadie'matchesalphabetizedWords[4] 'Sadie'.
-{% endhighlight %}
+```
 
 Like I mentioned earlier, c has its own implementation of the quicksort algorithm defined in stdlib.h.
 
 Its called qsort(). And it defines a subroutine for the algorithms we just wrote out by hand.
 
 ### part-2/5-qsort-strings/main.c
-{% highlight c++ %}
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -793,12 +791,12 @@ int main()
     doesAlphabetizeWork(unsortedWords,alphabetizedWords, strings_len);
 
 }
-{% endhighlight %}
+```
 Once again, we've defined our test function in a separate file.
 
 ### part-2/5-qsort-strings/doesAlphabetizeWork.c
 
-{% highlight c++ %}
+```
 #define RESET   "\033[0m"
 #define BLACK   "\033[30m"      /* Black */
 #define RED     "\033[31m"      /* Red */
@@ -843,33 +841,33 @@ void doesAlphabetizeWork(char *unsortedWords[],
         }
     }
 }
-{% endhighlight %}
+```
 
 
 If you compile this code and run it you should see:
 
-{% highlight bash %}
+```
 Success! unsortedWords[0] 'Batman'matchesalphabetizedWords[0] 'Batman'.
 Success! unsortedWords[1] 'Bryaxis'matchesalphabetizedWords[1] 'Bryaxis'.
 Success! unsortedWords[2] 'Lou'matchesalphabetizedWords[2] 'Lou'.
 Success! unsortedWords[3] 'Milo'matchesalphabetizedWords[3] 'Milo'.
 Success! unsortedWords[4] 'Sadie'matchesalphabetizedWords[4] 'Sadie'.
-{% endhighlight %}
+```
 
 Lets discuss the qsort() function.
 
 C library function definition:
-{% highlight c++ %}
+```
 void qsort(void *base, size_t nitems, size_t size, int (*compar)(const void *, const void*))
-{% endhighlight %}
+```
 
 Our usage in main.c
-{% highlight c++ %}
+```
 qsort(unsortedWords,
         strings_len,
      sizeof(char *),
        cstring_cmp);
-{% endhighlight %}
+```
 
 qsort() takes 4 arguments
 1. an collection to be sorted in terms of a pointer to an array.
@@ -881,7 +879,7 @@ Argument # 4 takes a pointer to a function, a callback routine. Typical in C, ca
 
 Heres our callback function cstring_cmp():
 
-{% highlight c++ %}
+```
 int cstring_cmp(const void *a, const void *b)
 {
     const char **ia = (const char **)a;
@@ -889,7 +887,7 @@ int cstring_cmp(const void *a, const void *b)
     return strcmp(*ia, *ib);
 
 }
-{% endhighlight %}
+```
 
 The reason qsort() needs this callback function is pertinent to our usage of it. qsort() can sort integers, chars, strings, or any C data structure, this callback function specifies how elements are compared. Comparing ints in C is different from comparing strings, this callback function must implement a comparison that is useful to the collection you are trying to sort. In our case, this callback function compares strings, and returns an int back to qsort() to let qsort() know wether to swap the two elements.
 

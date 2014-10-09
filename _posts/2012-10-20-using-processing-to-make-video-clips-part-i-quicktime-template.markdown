@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-published: true
+published: false
 title: Exporting Quicktime Movies with Processing - Part I
 author: Topher
 date: '2012-10-20 21:09:06 -0700'
@@ -16,12 +16,10 @@ tags:
 In this tutorial, I'll show you a template for making 2D quicktime movies with 
 [Processing.](http://processing.org/)
 
-[caption id="attachment_1083" align="aligncenter" width="323"]
-[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-7.49.48-PM.png) A video made with Processing.](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-7.49.48-PM.png)
+[![](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-7.49.48-PM.png) ](http://www.tophersaunders.com/wp/wp-content/uploads/2012/10/Screen-Shot-2012-10-20-at-7.49.48-PM.png)
+A video made with Processing.
 
 Processing is a very user friendly language. One of its strengths is how easily you can do procedural drawing. However, its surprisingly tricky to export sketches as quicktime movies, and its not very well documented (until now!)
-
-[]()[]()
 
 First I'll show you how to setup Processing, then I'll go over the Quicktime Template sketch that you can use as a starting point to make movies.
 
@@ -29,14 +27,11 @@ NOTE: This template only works for 2D drawing, using the P3D and OPENGL engines 
 
 Setup Step 1:
 
-
 Download Processing 
 **1.5.1 
 
-
 The latest version (Processing 2.0) will 
 **not work for our purposes.
-
 
 Here is a link to the 
 [download page.](http://www.processing.org/download/)****

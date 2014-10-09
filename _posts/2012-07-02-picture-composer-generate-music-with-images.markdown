@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-published: true
+published: false
 title: '"Picture Composer" - Graphics-Based RGB Chord Generator in MaxMSP'
 author: Topher
 date: '2012-07-02 20:57:34 -0700'

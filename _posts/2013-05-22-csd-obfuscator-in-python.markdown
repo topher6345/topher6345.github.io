@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-published: true
+published: false
 title: Csound .csd Obfuscator in Python
 author: Topher
 date: '2013-05-22 02:48:47 -0700'

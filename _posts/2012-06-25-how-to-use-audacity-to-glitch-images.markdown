@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-published: true
+published: false
 title: How to use Audacity to Glitch Images
 author: Topher
 date: '2012-06-25 21:17:18 -0700'
