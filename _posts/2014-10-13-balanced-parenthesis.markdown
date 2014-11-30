@@ -11,7 +11,17 @@ tags:
 - Ruby
 ---
 
+# Checking for Balanced Parenthesis in Ruby
+
+While I'm not a LISP programmer to the degree I'd like to be, I was recently tasked with writing a program that checks if a string of parentheses is **balanced**.
+
+Doing this is the lowest hanging fruit in the problem set of writing a LISP parser.
+
 ```ruby
+# This method takes a string 
+# and returns 0 if unbalanced
+# and returns 1 if balanced
+
 def balanced?(string)
   return 0 if closer? string[0]
   stack = ['$']
@@ -48,3 +58,11 @@ end
   puts balanced? expression
 end
 ```
+
+## The stack
+
+The key data structure involved in solving this task is a stack.
+
+In Ruby, the Array class can serve as our stack.
+
+One convention I use is the string `$` at the bottom of the stack. 
