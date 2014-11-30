@@ -1,3 +1,16 @@
+---
+layout: post
+status: publish
+published: true
+title: Maximum Deviation Alorithm in Ruby
+author: Topher
+date: '2014-11-1 13:29:54 -0700'
+categories:
+- Code
+tags:
+- Ruby
+---
+
 ```ruby
 class Array
   def subarrays(n)
