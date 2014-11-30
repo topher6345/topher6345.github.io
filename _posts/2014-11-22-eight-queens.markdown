@@ -1,3 +1,15 @@
+---
+layout: post
+status: publish
+published: true
+title: Eight Queens Puzzle
+author: Topher
+date: '2014-11-22 13:29:54 -0700'
+categories:
+- Code
+tags:
+- Ruby
+---
 # Eight queens puzzle
 From Wikipedia, the free encyclopedia
 
@@ -125,6 +137,9 @@ At very beginning I could see that removing diagonal elements would be the harde
 * Implement low hanging fruit
 * Design interfaces for more complicated problems
 
+## VS Lynda.com Solution
 
+The Lynda.com solution used a technique called backtracking, to go back one step if an invalid queen was placed. 
+Since my program only chooses from available places, this is not needed, but often results in a board where no moves are valid. In my case, the program calls itself with a fresh board, which may be ineffecient with large boards.
 
 
