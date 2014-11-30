@@ -1,3 +1,16 @@
+---
+layout: post
+status: publish
+published: true
+title: Checking for Balanced Parenthesis in Ruby
+author: Topher
+date: '2014-10-13 13:29:54 -0700'
+categories:
+- Code
+tags:
+- Ruby
+---
+
 ```ruby
 def balanced?(string)
   return 0 if closer? string[0]
