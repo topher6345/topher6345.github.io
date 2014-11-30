@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-published: true
+published: false
 title: Maximum Deviation Alorithm in Ruby
 author: Topher
 date: '2014-11-1 13:29:54 -0700'
