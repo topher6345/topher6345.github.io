@@ -1,4 +1,17 @@
-# Jekyll Build Tools Part I - Uglify JS
+---
+layout: post
+status: publish
+published: true
+title: Jekyll Build Tools Part I - Minifying Javascript
+author: Topher
+date: '2014-11-29 13:29:54 -0700'
+categories:
+- Code
+tags:
+- Ruby
+---
+
+# Jekyll Build Tools Part I - Minifying Javascript
 
 I love Jekyll, a static site generator. However it does not automatically minify javascript files.
 
