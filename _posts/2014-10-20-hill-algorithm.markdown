@@ -1,3 +1,17 @@
+---
+layout: post
+status: publish
+published: true
+title: Peak finding Algorithm in Ruby
+author: Topher
+date: '2014-10-20 13:29:54 -0700'
+categories:
+- Code
+tags:
+- Ruby
+---
+
+
 ```ruby
 class Array
   def sort_difference
