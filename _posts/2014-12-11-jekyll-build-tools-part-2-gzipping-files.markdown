@@ -17,9 +17,10 @@ Google's PageSpeed tool says:
 
 > All modern browsers support and automatically negotiate gzip compression for all HTTP requests. Enabling gzip compression can reduce the size of the transferred response by up to 90%, which can significantly reduce the amount of time to download the resource, reduce data usage for the client, and improve the time to first render of your pages.
 
-- https://developers.google.com/speed/docs/insights/EnableCompression
+[https://developers.google.com/speed/docs/insights/EnableCompression](https://developers.google.com/speed/docs/insights/EnableCompression)
 
 I tried (and failed) to do this with the shell commands `ls` and `gzip`. I couldn't find an elegant way to 
+
 * List all the files recursively
 * Ignore the directories
 
