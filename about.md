@@ -6,3 +6,4 @@ permalink: /about/
 
 # About 
 
+Full-stack Web Software Engineer in Santa Cruz, CA. 
