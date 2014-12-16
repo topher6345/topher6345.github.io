@@ -30,6 +30,32 @@ I ended up with a result that satisfies the following requirements
 
 and as a bonus, it will calculate queen placement for chessboards larger than 8x8
 
+### Benchmarks
+
+The solution I came up with is efficient for finding 8 queens. 
+
+It runs in an average of 5 ms.
+
+```ruby
+a = []
+# Run the script 1000 times and take the average
+1000.times do
+  a << Benchmark.measure {
+    Chessboard.new(8).calculate
+  }.to_a[1]
+end
+puts a.inject(0, &:+)/1000
+# => 0.00542
+```
+
+However, as the number of queens you want to find gets larger, the average time a little over doubles for each 2 queens you add.
+
+10 queens: 0.01843
+12 queens: 0.05360
+14 queens: 0.12643
+
+Had this problem been called the '64 queens' problem, my solution wouldn't have been very efficient. Because
+
 ### Code
 
 ```ruby
