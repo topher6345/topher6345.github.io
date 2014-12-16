@@ -128,8 +128,8 @@ puts a.inject(0, &:+)/1000
 
 However, as the number of queens you want to find gets larger, the average time a little over doubles for each 2 queens you add.
 
- queens | time(seconds)
-------------------------
+N(queens) | time(seconds)
+-------|----------------
  10 | 0.01843 
  12 | 0.05360 
  14 | 0.12643 
