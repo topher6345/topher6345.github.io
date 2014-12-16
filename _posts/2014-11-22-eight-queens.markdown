@@ -128,9 +128,11 @@ puts a.inject(0, &:+)/1000
 
 However, as the number of queens you want to find gets larger, the average time a little over doubles for each 2 queens you add.
 
-10 queens: 0.01843
-12 queens: 0.05360
-14 queens: 0.12643
+ queens | time(seconds)
+------------------------
+ 10 | 0.01843 
+ 12 | 0.05360 
+ 14 | 0.12643 
 
 My algorithm is somewhere between `O(N^2)` and `O(N^3)` in time complexity.
 The memory required to solve this problem grows either `O(N)` or `O(N^2)` depending 
