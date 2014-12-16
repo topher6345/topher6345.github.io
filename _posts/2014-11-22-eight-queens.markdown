@@ -30,31 +30,6 @@ I ended up with a result that satisfies the following requirements
 
 and as a bonus, it will calculate queen placement for chessboards larger than 8x8
 
-### Benchmarks
-
-The solution I came up with is efficient for finding 8 queens. 
-
-It runs in an average of 5 ms.
-
-```ruby
-a = []
-# Run the script 1000 times and take the average
-1000.times do
-  a << Benchmark.measure {
-    Chessboard.new(8).calculate
-  }.to_a[1]
-end
-puts a.inject(0, &:+)/1000
-# => 0.00542
-```
-
-However, as the number of queens you want to find gets larger, the average time a little over doubles for each 2 queens you add.
-
-10 queens: 0.01843
-12 queens: 0.05360
-14 queens: 0.12643
-
-Had this problem been called the '64 queens' problem, my solution wouldn't have been very efficient. Because
 
 ### Code
 
@@ -133,6 +108,44 @@ end
 Chessboard.new(8).calculate
 ```
 
+### Benchmarks
+
+The solution I came up with is efficient for finding 8 queens. 
+
+It runs in an average of 5 ms.
+
+```ruby
+a = []
+# Run the script 1000 times and take the average
+1000.times do
+  a << Benchmark.measure {
+    Chessboard.new(8).calculate
+  }.to_a[1]
+end
+puts a.inject(0, &:+)/1000
+# => 0.00542
+```
+
+However, as the number of queens you want to find gets larger, the average time a little over doubles for each 2 queens you add.
+
+10 queens: 0.01843
+12 queens: 0.05360
+14 queens: 0.12643
+
+My algorithm is somewhere between `O(N^2)` and `O(N^3)` in time complexity.
+The memory required to solve this problem grows either `O(N)` or `O(N^2)` depending 
+on how you define what the input is.
+
+If you define the input as `N` number of queens, then you have to create a 2-dimensional chessboard of `N^2` size
+If you define the input as the **board size**, because it is implicit that `N` queens must exist on an `N^2` size board, then you could get away with saying the space complexity is `O(N)`
+
+
+Had this problem been called the '64 queens' problem, my solution wouldn't have been very time efficient.
+
+But since the name of the problem is **8** queens, and `O(N^2)` time algorithms can be practical for small inputs, 
+I think it is an adequate solution to the challenge.
+
+
 ## Data Structures
 
 My first step was to determine what data structure I will use. 
@@ -140,10 +153,6 @@ My first step was to determine what data structure I will use.
 At first, I thought an 8-element array of 8-element arrays would work. 
 
 I settled on a 64 element array of `x` and `y` coordinates. 
-
-## Analysis
-
-At very beginning I could see that removing diagonal elements would be the hardest part of the solution.
 
 ## Algorithm
 
