@@ -138,11 +138,12 @@ My algorithm is somewhere between `O(N^2)` and `O(N^3)` in time complexity.
 The memory required to solve this problem grows either `O(N)` or `O(N^2)` depending 
 on how you define what the input is.
 
-If you define the input as `N` number of queens, then you have to create a 2-dimensional chessboard of `N^2` size
-If you define the input as the **board size**, because it is implicit that `N` queens must exist on an `N^2` size board, then you could get away with saying the space complexity is `O(N)`
+* If you define the input as `N` number of queens, then you have to create a 2-dimensional chessboard of `N^2` size.
+Had this problem been called the '64 queens' problem, my solution wouldn have taken to loong to be adequate.
+
+* If you define the input as the **board size** (because it is implicit that `N` queens must exist on an `N^2` size board) then you could probably get away with saying the space complexity is `O(N)`.
 
 
-Had this problem been called the '64 queens' problem, my solution wouldn't have been very time efficient.
 
 But since the name of the problem is **8** queens, and `O(N^2)` time algorithms can be practical for small inputs, 
 I think it is an adequate solution to the challenge.
