@@ -1,5 +1,19 @@
 ---
 ---
+layout: post
+status: publish
+published: true
+title: Csound minifier in Ruby
+author: Topher
+date: '2014-12-22 13:29:54 -0700'
+categories:
+- Code
+tags:
+- Ruby
+- Csound
+---
+
+---
 
 # Csound minifier
 
