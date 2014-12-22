@@ -1,5 +1,4 @@
 ---
----
 layout: post
 status: publish
 published: true
@@ -11,8 +10,6 @@ categories:
 tags:
 - Ruby
 - Csound
----
-
 ---
 
 # Csound minifier
