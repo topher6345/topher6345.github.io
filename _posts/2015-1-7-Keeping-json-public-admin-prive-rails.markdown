@@ -10,3 +10,27 @@ categories:
 tags:
 - Ruby
 ---
+
+
+
+```ruby
+# app/controllers/concerns/authorize_public.rb
+module AuthorizePublic
+  extend ActiveSupport::Concern
+  included do
+    before_action :authorize
+  end
+
+  def authorize
+    authenticate_user! unless request.format.to_s == 'application/json'
+  end
+end
+```
+
+```ruby
+# app/controllers/post_controller.rb
+class PostController < ApplicationController
+  include AuthorizePublic
+  # ...
+end
+```
