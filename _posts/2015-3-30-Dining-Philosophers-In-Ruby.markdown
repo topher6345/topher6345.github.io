@@ -1,3 +1,17 @@
+---
+layout: post
+status: publish
+published: true
+title: Dining Philosophers in Ruby
+author: Topher
+date: '2015-3-20 13:29:54 -0700'
+categories:
+- Code
+tags:
+- Ruby
+---
+
+
 ```ruby
 # Dining Philosophers
 #     \ # /
