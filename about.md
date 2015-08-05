@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-# About 
+# About
 
-Full-stack Web Software Engineer in Santa Cruz, CA. 
+Full-stack Web Software Engineer in San Fancisco
