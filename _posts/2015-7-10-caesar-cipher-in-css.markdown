@@ -28,6 +28,118 @@ In the center of the wheel, you can find the key that will decode the encoded me
 
 # Implementation in Ruby
 
+The Caesar Cipher is a a pretty naive cryptographic cipher. I thought it would be fun to demonstrate just how weak the cipher is by writing 
+1. A Ruby class to encipher a string
+2. A Ruby class to crack an enciphered message
+
+We can crack an enciphered message 
+* Analyze the letter frequencies of the ciphertext 
+* Assume that the most frequent letter in the cipher text is 'e' in plaintext
+* Calculate the distance between 'e' and the most frequent letter in the ciphertext
+* Apply a shift to the ciphertext to decipher the message into plaintext
+
+
+## Enciphering plaintext
+
+Given a shift value, we can create a table(or dictionary or map) that maps plaintext letters to shifted ciphertext letters. In Ruby the `Hash` class will work great for this. We can use a plaintext letter as a key and the shifted ciphertext letter as the value.
+
+```ruby
+cipher = { 'a' => 'c'}
+cipher['a']
+=> 'c'
+```
+
+To build such a table based on a shift value we first start with a sequence of all the letters in the alphabet. We can do this in Ruby by using a `Range` and converting it into an array of characters
+
+```ruby
+  ALPHABET = ('a'..'z').to_a
+=> ['a', 'b', 'c', ..]
+```
+
+Because we want to preserve capitalization, we'll create another range that builds a sequence of all capital letters
+
+```ruby
+ALPHABET_UPCASE = ('A'..'Z').to_a
+=> ['A', 'B', 'C', ..]
+```
+
+We can assign these to constants because these sequences will not change or be mutated or reassigned during the process.
+
+### Building the dictionary
+
+We can rotate an array using the `Array#rotate` method
+
+```ruby
+shift = 3
+ALPHABET.rotate(shift)
+=> ['c', 'd', 'e', ..]
+```
+
+this will return a **copy** of the alphabet array that has been rotated.
+
+This will provide the value set of our `Hash` map.
+
+We can then take the original alphabet array and `zip` the shifted array to get an array of pairs
+
+```ruby
+shift = 3
+ALPHABET.zip(ALPHABET.rotate(shift))
+=> [['a', 'c'], ['b', 'd'] ...]
+```
+We now have key/value pairs, but this isn't the `Hash` that we want.
+
+Luckily the `Hash#[]` method can construct a new `Hash` from an array.
+
+first we have to transform the two dimensional array into a one dimensional array, we can use `Array#flatten` to do this
+
+```ruby
+shift = 3
+ALPHABET.rotate(shift)).flatten(1)
+=> ['a', 'c', 'b', 'd', ...]
+```
+
+We can then use the splat operator `*` to transform an array into a list of arguments
+
+
+```ruby
+Hash[*ALPHABET.zip(ALPHABET.rotate(shift)).flatten(1)]
+=> {'a' => 'c', 'b' => 'd', ...}
+```
+
+Now we have a hash that maps lowercase plaintext letters to ciphertext letters. We can use the `Hash#merge!` method to merge a similar table with uppercase letters
+
+```ruby
+@cipher = Hash[*ALPHABET.zip(ALPHABET.rotate(shift)).flatten(1)].merge!(
+Hash[*ALPHABET_UPCASE.zip(ALPHABET_UPCASE.rotate(shift)).flatten(1)])
+```
+
+## Usage
+
+Let's encipher a funny satirical article
+
+> An online listing for a job at area marketing firm BizKo Solutions has left local man Ryan Urlich unsure whether he is truly dynamic enough to qualify for the position, sources confirmed Wednesday. “I’m willing to work in a fast-paced, deadline-oriented environment, sure, but am I really a dynamic self-starter?” said the 29-year-old college graduate, adding that this is the first time he’s ever considered whether he’s “a results-driven, high-energy ‘A’ player capable of providing cutting-edge insights.” “I suppose I can reimagine a brand, but can I go into a job interview, look someone in the eye, and tell them I’m a strong strategic thinker with the creative vision to drive brand awareness in an increasingly global marketplace? I don’t know if I can.” According to reports, Urlich ultimately decided not to apply for the job, saying he needed to take a few days to “really stop and think” about how dynamic he truly is so that he doesn’t waste anyone at BizKo’s time.
+
+http://www.theonion.com/video/man-not-sure-hes-dynamic-enough-to-work-at-local-m-31546
+
+We'll assign the above article to `plaintext`, and use a random shift amount, not even we will know!
+
+```
+secret = CaesarCipher::Encoder.new(plaintext: plaintext.sample, shift: rand(3..25)).encoded_message
+p secret
+```
+
+> "Zm nmkhmd khrshmf enq z ina zs zqdz lzqjdshmf ehql AhyJn Rnktshnmr gzr kdes knbzk lzm Qxzm Tqkhbg tmrtqd vgdsgdq gd hr sqtkx cxmzlhb dmntfg sn ptzkhex enq sgd onrhshnm, rntqbdr bnmehqldc Vdcmdrczx. “H’l vhkkhmf sn vnqj hm z ezrs-ozbdc, cdzckhmd-nqhdmsdc dmuhqnmldms, rtqd, ats zl H qdzkkx z cxmzlhb rdke-rszqsdq?” rzhc sgd 29-xdzq-nkc bnkkdfd fqzctzsd, zcchmf sgzs sghr hr sgd ehqrs shld gd’r dudq bnmrhcdqdc vgdsgdq gd’r “z qdrtksr-cqhudm, ghfg-dmdqfx ‘Z’ okzxdq bzozakd ne oqnuhchmf btsshmf-dcfd hmrhfgsr.” “H rtoonrd H bzm qdhlzfhmd z aqzmc, ats bzm H fn hmsn z ina hmsdquhdv, knnj rnldnmd hm sgd dxd, zmc sdkk sgdl H’l z rsqnmf rsqzsdfhb sghmjdq vhsg sgd bqdzshud uhrhnm sn cqhud aqzmc zvzqdmdrr hm zm hmbqdzrhmfkx fknazk lzqjdsokzbd? H cnm’s jmnv he H bzm.” Zbbnqchmf sn qdonqsr, Tqkhbg tkshlzsdkx cdbhcdc mns sn zookx enq sgd ina, rzxhmf gd mddcdc sn szjd z edv czxr sn “qdzkkx rsno zmc sghmj” zants gnv cxmzlhb gd sqtkx hr rn sgzs gd cndrm’s vzrsd zmxnmd zs AhyJn’r shld."
+
+Not as funny.
+
+
+We use the Decoder class to crack this message.
+
+```ruby
+CaesarCipher::Cracker.new(secret).cracked
+```
+
+## Full source with examples:
 
 ```ruby
 # A library for encoding/cracking the Ceasar Cipher
@@ -112,8 +224,7 @@ end
 
 ```ruby
 
-plaintext = []
-plaintext << <<TEXT
+plaintext = <<TEXT
   An online listing for a job at area marketing firm BizKo Solutions has left local man Ryan Urlich unsure whether he is truly dynamic enough to qualify for the position, sources confirmed Wednesday. “I’m willing to work in a fast-paced, deadline-oriented environment, sure, but am I really a dynamic self-starter?” said the 29-year-old college graduate, adding that this is the first time he’s ever considered whether he’s “a results-driven, high-energy ‘A’ player capable of providing cutting-edge insights.” “I suppose I can reimagine a brand, but can I go into a job interview, look someone in the eye, and tell them I’m a strong strategic thinker with the creative vision to drive brand awareness in an increasingly global marketplace? I don’t know if I can.” According to reports, Urlich ultimately decided not to apply for the job, saying he needed to take a few days to “really stop and think” about how dynamic he truly is so that he doesn’t waste anyone at BizKo’s time.
 TEXT
 
