@@ -22,5 +22,5 @@ Have some CSS for your Independence day weekend.
 
 # From San Francisco!
 
-<p data-height="268" data-theme-id="0" data-slug-hash="aOYbrM" data-default-tab="result" data-user="topher6345" class='codepen'>See the Pen <a href='http://codepen.io/topher6345/pen/aOYbrM/'>Happy 4th of July from San Francisco!</a> by Christopher Saunders (<a href='http://codepen.io/topher6345'>@topher6345</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="334" data-theme-id="0" data-slug-hash="aOYbrM" data-default-tab="result" data-user="topher6345" class='codepen'>See the Pen <a href='http://codepen.io/topher6345/pen/aOYbrM/'>Happy 4th of July from San Francisco!</a> by Christopher Saunders (<a href='http://codepen.io/topher6345'>@topher6345</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
