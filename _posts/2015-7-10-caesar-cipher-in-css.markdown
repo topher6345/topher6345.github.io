@@ -34,6 +34,7 @@ The Caesar Cipher is a a pretty naive cryptographic cipher. I thought it would b
 2. A Ruby class to crack an enciphered message `CaesarCipher::Crack`
 
 We can crack an enciphered message by
+
 * Analyzing the letter frequencies of the ciphertext 
 * Assuming that the most frequent letter in the cipher text is 'e' in plaintext
 * Calculating the distance between 'e' and the most frequent letter in the ciphertext
