@@ -29,14 +29,15 @@ In the center of the wheel, you can find the key that will decode the encoded me
 # Implementation in Ruby
 
 The Caesar Cipher is a a pretty naive cryptographic cipher. I thought it would be fun to demonstrate just how weak the cipher is by writing 
-1. A Ruby class to encipher a string
-2. A Ruby class to crack an enciphered message
 
-We can crack an enciphered message 
-* Analyze the letter frequencies of the ciphertext 
-* Assume that the most frequent letter in the cipher text is 'e' in plaintext
-* Calculate the distance between 'e' and the most frequent letter in the ciphertext
-* Apply a shift to the ciphertext to decipher the message into plaintext
+1. A Ruby class to encipher a string `CaesarCipher::Encode`
+2. A Ruby class to crack an enciphered message `CaesarCipher::Crack`
+
+We can crack an enciphered message by
+* Analyzing the letter frequencies of the ciphertext 
+* Assuming that the most frequent letter in the cipher text is 'e' in plaintext
+* Calculating the distance between 'e' and the most frequent letter in the ciphertext
+* Appling a shift to the ciphertext to decipher the message into plaintext
 
 
 ## Enciphering plaintext
@@ -49,14 +50,14 @@ cipher['a']
 => 'c'
 ```
 
-To build such a table based on a shift value we first start with a sequence of all the letters in the alphabet. We can do this in Ruby by using a `Range` and converting it into an array of characters
+To build such a table based on a shift value we first start with a set of all the letters in the English alphabet. We can do this in Ruby by using a `Range` and converting it into an array of characters.
 
 ```ruby
   ALPHABET = ('a'..'z').to_a
 => ['a', 'b', 'c', ..]
 ```
 
-Because we want to preserve capitalization, we'll create another range that builds a sequence of all capital letters
+Because we want to preserve capitalization, we'll create another range that builds a sequence of all capital letters.
 
 ```ruby
 ALPHABET_UPCASE = ('A'..'Z').to_a
@@ -69,17 +70,19 @@ We can assign these to constants because these sequences will not change or be m
 
 We can rotate an array using the `Array#rotate` method
 
+http://ruby-doc.org/core-2.2.0/Array.html#method-i-rotate
+
 ```ruby
 shift = 3
 ALPHABET.rotate(shift)
 => ['c', 'd', 'e', ..]
 ```
 
-this will return a **copy** of the alphabet array that has been rotated.
-
-This will provide the value set of our `Hash` map.
+This will return a **copy** of the alphabet array that has been rotated and provide the value set of our `Hash` map.
 
 We can then take the original alphabet array and `zip` the shifted array to get an array of pairs
+
+http://ruby-doc.org/core-2.2.0/Array.html#method-i-zip
 
 ```ruby
 shift = 3
@@ -90,7 +93,11 @@ We now have key/value pairs, but this isn't the `Hash` that we want.
 
 Luckily the `Hash#[]` method can construct a new `Hash` from an array.
 
+http://ruby-doc.org/core-2.2.0/Hash.html#method-c-5B-5D
+
 first we have to transform the two dimensional array into a one dimensional array, we can use `Array#flatten` to do this
+
+http://ruby-doc.org/core-2.2.0/Array.html#method-i-flatten
 
 ```ruby
 shift = 3
@@ -100,6 +107,7 @@ ALPHABET.rotate(shift)).flatten(1)
 
 We can then use the splat operator `*` to transform an array into a list of arguments
 
+http://ruby-doc.org/core-2.2.0/doc/syntax/calling_methods_rdoc.html#label-Array+to+Arguments+Conversion
 
 ```ruby
 Hash[*ALPHABET.zip(ALPHABET.rotate(shift)).flatten(1)]
@@ -108,6 +116,8 @@ Hash[*ALPHABET.zip(ALPHABET.rotate(shift)).flatten(1)]
 
 Now we have a hash that maps lowercase plaintext letters to ciphertext letters. We can use the `Hash#merge!` method to merge a similar table with uppercase letters
 
+http://ruby-doc.org/core-2.2.0/Hash.html#method-i-merge-21
+
 ```ruby
 @cipher = Hash[*ALPHABET.zip(ALPHABET.rotate(shift)).flatten(1)].merge!(
 Hash[*ALPHABET_UPCASE.zip(ALPHABET_UPCASE.rotate(shift)).flatten(1)])
@@ -115,13 +125,15 @@ Hash[*ALPHABET_UPCASE.zip(ALPHABET_UPCASE.rotate(shift)).flatten(1)])
 
 ## Usage
 
-Let's encipher a funny satirical article
+Let's encipher a funny satirical article. 
 
 > An online listing for a job at area marketing firm BizKo Solutions has left local man Ryan Urlich unsure whether he is truly dynamic enough to qualify for the position, sources confirmed Wednesday. “I’m willing to work in a fast-paced, deadline-oriented environment, sure, but am I really a dynamic self-starter?” said the 29-year-old college graduate, adding that this is the first time he’s ever considered whether he’s “a results-driven, high-energy ‘A’ player capable of providing cutting-edge insights.” “I suppose I can reimagine a brand, but can I go into a job interview, look someone in the eye, and tell them I’m a strong strategic thinker with the creative vision to drive brand awareness in an increasingly global marketplace? I don’t know if I can.” According to reports, Urlich ultimately decided not to apply for the job, saying he needed to take a few days to “really stop and think” about how dynamic he truly is so that he doesn’t waste anyone at BizKo’s time.
 
 http://www.theonion.com/video/man-not-sure-hes-dynamic-enough-to-work-at-local-m-31546
 
-We'll assign the above article to `plaintext`, and use a random shift amount, not even we will know!
+Because we rely on a statistical analysis of the frequency of letters in our plaintext message, it is important that this message be of substantial length, 
+
+We'll assign the above article to `plaintext`, and use a random shift amount, not even we will know what the key is.
 
 ```
 secret = CaesarCipher::Encoder.new(plaintext: plaintext.sample, shift: rand(3..25)).encoded_message
@@ -130,10 +142,8 @@ p secret
 
 > "Zm nmkhmd khrshmf enq z ina zs zqdz lzqjdshmf ehql AhyJn Rnktshnmr gzr kdes knbzk lzm Qxzm Tqkhbg tmrtqd vgdsgdq gd hr sqtkx cxmzlhb dmntfg sn ptzkhex enq sgd onrhshnm, rntqbdr bnmehqldc Vdcmdrczx. “H’l vhkkhmf sn vnqj hm z ezrs-ozbdc, cdzckhmd-nqhdmsdc dmuhqnmldms, rtqd, ats zl H qdzkkx z cxmzlhb rdke-rszqsdq?” rzhc sgd 29-xdzq-nkc bnkkdfd fqzctzsd, zcchmf sgzs sghr hr sgd ehqrs shld gd’r dudq bnmrhcdqdc vgdsgdq gd’r “z qdrtksr-cqhudm, ghfg-dmdqfx ‘Z’ okzxdq bzozakd ne oqnuhchmf btsshmf-dcfd hmrhfgsr.” “H rtoonrd H bzm qdhlzfhmd z aqzmc, ats bzm H fn hmsn z ina hmsdquhdv, knnj rnldnmd hm sgd dxd, zmc sdkk sgdl H’l z rsqnmf rsqzsdfhb sghmjdq vhsg sgd bqdzshud uhrhnm sn cqhud aqzmc zvzqdmdrr hm zm hmbqdzrhmfkx fknazk lzqjdsokzbd? H cnm’s jmnv he H bzm.” Zbbnqchmf sn qdonqsr, Tqkhbg tkshlzsdkx cdbhcdc mns sn zookx enq sgd ina, rzxhmf gd mddcdc sn szjd z edv czxr sn “qdzkkx rsno zmc sghmj” zants gnv cxmzlhb gd sqtkx hr rn sgzs gd cndrm’s vzrsd zmxnmd zs AhyJn’r shld."
 
-Not as funny.
 
-
-We use the Decoder class to crack this message.
+We can use the `Cracker` class to crack this message.
 
 ```ruby
 CaesarCipher::Cracker.new(secret).cracked
@@ -199,8 +209,9 @@ module CaesarCipher
     end
 
     def analyze_frequency
+      total_letter_count = total_count
       letters_by_count.map do |item|
-        ["#{(item[0].to_f / total_count * 100.0).round(2)}%", item[1]]
+        ["#{(item[0].to_f / total_letter_count * 100.0).round(2)}%", item[1]]
       end
     end
 
