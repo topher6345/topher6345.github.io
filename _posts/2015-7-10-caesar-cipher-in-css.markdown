@@ -13,8 +13,6 @@ tags:
 - - Ruby
 ---
 
-# Caesar Cipher
-
 > In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet.
 
 Below is a interactive endcoder/decoder for the Caesar Cipher I wrote in HTML/CSS/Javascript.
@@ -26,12 +24,12 @@ In the center of the wheel, you can find the key that will decode the encoded me
 <p data-height="623" data-theme-id="0" data-slug-hash="KpQBxZ" data-default-tab="result" data-user="topher6345" class='codepen'>See the Pen <a href='http://codepen.io/topher6345/pen/KpQBxZ/'>Super Secret Decoder Ring</a> by Christopher Saunders (<a href='http://codepen.io/topher6345'>@topher6345</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-# Implementation in Ruby
+## Implementation in Ruby
 
 The Caesar Cipher is a a pretty naive cryptographic cipher. I thought it would be fun to demonstrate just how weak the cipher is by writing 
 
 1. A Ruby class to encipher a string `CaesarCipher::Encode`
-2. A Ruby class to crack an enciphered message `CaesarCipher::Crack`
+2. A Ruby class to crack an enciphered message `CaesarCipher::Cracker`
 
 We can crack an enciphered message by
 
@@ -71,7 +69,7 @@ We can assign these to constants because these sequences will not change or be m
 
 We can rotate an array using the `Array#rotate` method
 
-http://ruby-doc.org/core-2.2.0/Array.html#method-i-rotate
+[http://ruby-doc.org/core-2.2.0/Array.html#method-i-rotate](Array#rotate)
 
 ```ruby
 shift = 3
@@ -83,7 +81,7 @@ This will return a **copy** of the alphabet array that has been rotated and prov
 
 We can then take the original alphabet array and `zip` the shifted array to get an array of pairs
 
-http://ruby-doc.org/core-2.2.0/Array.html#method-i-zip
+[http://ruby-doc.org/core-2.2.0/Array.html#method-i-zip](Array#zip)
 
 ```ruby
 shift = 3
@@ -94,11 +92,11 @@ We now have key/value pairs, but this isn't the `Hash` that we want.
 
 Luckily the `Hash#[]` method can construct a new `Hash` from an array.
 
-http://ruby-doc.org/core-2.2.0/Hash.html#method-c-5B-5D
+[http://ruby-doc.org/core-2.2.0/Hash.html#method-c-5B-5D](Hash#[])
 
 first we have to transform the two dimensional array into a one dimensional array, we can use `Array#flatten` to do this
 
-http://ruby-doc.org/core-2.2.0/Array.html#method-i-flatten
+[http://ruby-doc.org/core-2.2.0/Array.html#method-i-flatten](Array#flatten)
 
 ```ruby
 shift = 3
@@ -108,7 +106,7 @@ ALPHABET.rotate(shift)).flatten(1)
 
 We can then use the splat operator `*` to transform an array into a list of arguments
 
-http://ruby-doc.org/core-2.2.0/doc/syntax/calling_methods_rdoc.html#label-Array+to+Arguments+Conversion
+[http://ruby-doc.org/core-2.2.0/doc/syntax/calling_methods_rdoc.html#label-Array+to+Arguments+Conversion](Array to Arguments Conversion)
 
 ```ruby
 Hash[*ALPHABET.zip(ALPHABET.rotate(shift)).flatten(1)]
@@ -117,7 +115,7 @@ Hash[*ALPHABET.zip(ALPHABET.rotate(shift)).flatten(1)]
 
 Now we have a hash that maps lowercase plaintext letters to ciphertext letters. We can use the `Hash#merge!` method to merge a similar table with uppercase letters
 
-http://ruby-doc.org/core-2.2.0/Hash.html#method-i-merge-21
+[http://ruby-doc.org/core-2.2.0/Hash.html#method-i-merge-21](Hash#merge)
 
 ```ruby
 @cipher = Hash[*ALPHABET.zip(ALPHABET.rotate(shift)).flatten(1)].merge!(
@@ -233,9 +231,9 @@ module CaesarCipher
 end
 ```
 
+## Usage
 
 ```ruby
-
 plaintext = <<TEXT
   An online listing for a job at area marketing firm BizKo Solutions has left local man Ryan Urlich unsure whether he is truly dynamic enough to qualify for the position, sources confirmed Wednesday. “I’m willing to work in a fast-paced, deadline-oriented environment, sure, but am I really a dynamic self-starter?” said the 29-year-old college graduate, adding that this is the first time he’s ever considered whether he’s “a results-driven, high-energy ‘A’ player capable of providing cutting-edge insights.” “I suppose I can reimagine a brand, but can I go into a job interview, look someone in the eye, and tell them I’m a strong strategic thinker with the creative vision to drive brand awareness in an increasingly global marketplace? I don’t know if I can.” According to reports, Urlich ultimately decided not to apply for the job, saying he needed to take a few days to “really stop and think” about how dynamic he truly is so that he doesn’t waste anyone at BizKo’s time.
 TEXT
