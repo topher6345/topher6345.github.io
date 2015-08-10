@@ -98,11 +98,11 @@ This lets me stagger the `animation-delay` property, so I can reuse the same ani
         - g_num += 1
 ```
 
-Procedurally laying out the stars was tricky. The solution I cam up with was to use nested iterators, and one global variable (gasp) `g_num` to give each of th 50 stars an individual class name.
+Procedurally laying out the stars was tricky. The solution I came up with was to use nested iterators, and one global variable (gasp) `g_num` to give each of the 50 stars an individual class name.
 
 The star icon itself is from the [http://getbootstrap.com/components/](bootstrap glyphicons) collection.
 
-The 50 stars on the American flag are layed out in 7 rows of alternating sizes of 6 and 5.
+The 50 stars on the American flag are laid out in 7 rows of alternating sizes of 6 and 5.
 
 One can express this in HAML/Ruby by using an array literal `[6,5,6,5,6,5,6]`.
 
@@ -132,12 +132,12 @@ each star is given a unique classname so that we can have a cascading twinkling 
 
 ## Conclusion
 
-Thanks to [http://www.hamptoncatlin.com/](Hampton Catlin), who wrote both SCSS and HAML (among other things, when does he sleep!?), I was able to use languages that compile to HTML and CSS to succinctly express a sophisticated layout. This may be beyond the original intention of what HTML and CSS were meant to do, but it sure was alot of fun working on this patriotic display!  
+Thanks to [http://www.hamptoncatlin.com/](Hampton Catlin), who wrote both SCSS and HAML (among other things, when does he sleep!?), I was able to use languages that compile to HTML and CSS to succinctly express a sophisticated layout. This may be beyond the original intention of what HTML and CSS were meant to do, but it sure was a lot of fun working on this patriotic display!  
 
 
 # Bonus - From San Francisco!
 
-I recently moved to San Francisco and thought I'd like to express my appreciation for the new city and celebrate the ctiy's unofficial flag.
+I recently moved to San Francisco and thought I'd like to express my appreciation for the new city and celebrate the city's unofficial flag.
 
 <p data-height="334" data-theme-id="0" data-slug-hash="aOYbrM" data-default-tab="result" data-user="topher6345" class='codepen'>See the Pen <a href='http://codepen.io/topher6345/pen/aOYbrM/'>Happy 4th of July from San Francisco!</a> by Christopher Saunders (<a href='http://codepen.io/topher6345'>@topher6345</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
