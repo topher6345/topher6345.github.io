@@ -4,7 +4,7 @@ status: publish
 published: true
 title: American Flag in HAML/SCSS
 author: Topher
-date: '2015-08-9 22:14:25 -0700'
+date: '2015-08-09 22:14:25 -0700'
 categories:
 - CSS
 - Code
